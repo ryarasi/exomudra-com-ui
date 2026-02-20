@@ -9,7 +9,7 @@ Exomudra Technologies Private Limited is a deep tech startup founded to revoluti
 **Location**: Chennai, India
 **Stage**: Early-stage, prototyping phase
 **Incubator**: iTNT Hub
-**Founded**: 2021
+**Founded**: 2024
 **Industry**: Deep Tech, Hardware, Motion Capture
 
 ## The Problem We Solve
@@ -53,8 +53,8 @@ Enhanced training experiences for industrial jobs, educational institutions, hea
 
 ## Products
 
-### Exomudra Sanjna (Lite) - Rs. 25,000
-The Sanjna (Sanskrit: सञ्ज्ञा, meaning "gesture/sign") is the lite version without force feedback, designed primarily for sign language translation and gesture-based interaction.
+### Exomudra Beacon (Lite) - Rs. 25,000
+The Beacon is the lite version without force feedback, designed primarily for sign language translation and gesture-based interaction. At ~$300 USD, it is 10-20x more affordable than comparable gloves from competitors like Manus ($3,600–$11,900).
 
 **Features:**
 - Precision gesture tracking with IMU + flex sensor fusion
@@ -65,11 +65,11 @@ The Sanjna (Sanskrit: सञ्ज्ञा, meaning "gesture/sign") is the lite
 - Free Exomudra Configurator for universal device mapping
 - Includes 1 year software subscription
 
-### Exomudra Shakti (Pro) - Rs. 50,000
-The Shakti (Sanskrit: शक्ति, meaning "power/force") includes an active force-feedback mechanism using motors to introduce resistance to finger motion. This enables finger strengthening for rehabilitation patients and haptic feedback for VR/AR.
+### Exomudra Forge (Pro) - Rs. 50,000
+The Forge includes an active force-feedback mechanism using motors to introduce resistance to finger motion. This enables finger strengthening for rehabilitation patients and haptic feedback for VR/AR. At ~$600 USD, it undercuts haptic competitors like the Manus Metagloves Pro Haptic ($8,879–$11,891) by a significant margin.
 
 **Features:**
-- Everything in Sanjna, plus:
+- Everything in Beacon, plus:
 - Active force-feedback motors for finger resistance
 - Haptic feedback on touching virtual surfaces
 - Finger strengthening for rehabilitation patients
@@ -86,9 +86,9 @@ Every unit ships with the Exomudra Configurator — a desktop application that p
 ## Technology and Innovation
 
 ### Sensor Technology
-The gloves utilize advanced sensor fusion technology with IMU + flex sensors for precise hand tracking. The proprietary sensor fusion algorithms overcome common drift issues inherent in IMU-only solutions. The Shakti model uses rack-and-pinion mechanisms with magnetic encoders (AS5600) for 0.087-degree angular resolution.
+The gloves utilize advanced sensor fusion technology with IMU + flex sensors for precise hand tracking. The proprietary sensor fusion algorithms overcome common drift issues inherent in IMU-only solutions. The Forge model uses rack-and-pinion mechanisms with magnetic encoders (AS5600) for 0.087-degree angular resolution.
 
-### Force Feedback (Shakti only)
+### Force Feedback (Forge only)
 Motor-driven resistance on each finger via tendon-driven mechanisms connected to smart servos. Creates the sensation of touching and gripping real objects in virtual space. Also serves as a rehabilitation tool for progressive finger strengthening.
 
 ### Wireless Connectivity
@@ -106,7 +106,7 @@ Full compatibility with major platforms and development environments:
 ## Competitive Advantages
 
 1. **Fully Mobile Solution**: Self-contained design eliminates need for external tracking systems
-2. **Affordable Innovation**: Gesture-based input at 2-5x lower cost than competitors
+2. **Affordable Innovation**: Gesture-based input at 10-20x lower cost than competitors like Manus ($3,600–$11,900)
 3. **Broad Market Focus**: Cross-sector applicability versus narrow industry-specific solutions
 4. **Superior Tracking**: Proprietary sensor fusion technology for enhanced accuracy
 5. **Developer-Friendly**: Comprehensive SDK and API for easy integration
