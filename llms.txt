@@ -6,11 +6,11 @@
 
 Exomudra Technologies Private Limited is a deep tech startup founded to revolutionize human-machine interaction. The company is incubated at iTNT Hub and focuses on developing advanced motion capture technology through smart gloves.
 
-**Location**: Chennai, India  
-**Stage**: Early-stage, prototyping phase  
-**Incubator**: iTNT Hub  
-**Founded**: 2021  
-**Industry**: Deep Tech, Hardware, Motion Capture  
+**Location**: Chennai, India
+**Stage**: Early-stage, prototyping phase
+**Incubator**: iTNT Hub
+**Founded**: 2021
+**Industry**: Deep Tech, Hardware, Motion Capture
 
 ## The Problem We Solve
 
@@ -51,10 +51,45 @@ Professional motion capture solutions for animation in movies, video game cutsce
 #### VR Training and Simulation
 Enhanced training experiences for industrial jobs, educational institutions, healthcare, defense, and professional development programs.
 
+## Products
+
+### Exomudra Sanjna (Lite) - Rs. 25,000
+The Sanjna (Sanskrit: सञ्ज्ञा, meaning "gesture/sign") is the lite version without force feedback, designed primarily for sign language translation and gesture-based interaction.
+
+**Features:**
+- Precision gesture tracking with IMU + flex sensor fusion
+- Designed for sign language translation and accessibility
+- Wireless low-latency connectivity
+- Cross-platform support (Windows, macOS, Linux)
+- Lightweight ergonomic build
+- Free Exomudra Configurator for universal device mapping
+- Includes 1 year software subscription
+
+### Exomudra Shakti (Pro) - Rs. 50,000
+The Shakti (Sanskrit: शक्ति, meaning "power/force") includes an active force-feedback mechanism using motors to introduce resistance to finger motion. This enables finger strengthening for rehabilitation patients and haptic feedback for VR/AR.
+
+**Features:**
+- Everything in Sanjna, plus:
+- Active force-feedback motors for finger resistance
+- Haptic feedback on touching virtual surfaces
+- Finger strengthening for rehabilitation patients
+- Immersive VR/AR control with tactile response
+- Free Exomudra Configurator for universal device mapping
+- Includes 1 year software subscription
+
+### Software Subscription
+First year is free with hardware purchase. Annual subscription required for continued software updates, cloud features, and gesture library access.
+
+### Exomudra Configurator (Free)
+Every unit ships with the Exomudra Configurator — a desktop application that patches the firmware to allow the buyer to map the glove as any hardware input device (keyboard, mouse, MIDI, gamepad, etc.) for any use case.
+
 ## Technology and Innovation
 
 ### Sensor Technology
-The gloves utilize advanced sensor fusion technology with a 7-sensor system that tracks entire hand movement precisely. The proprietary sensor fusion algorithms overcome common drift issues inherent in IMU-only solutions.
+The gloves utilize advanced sensor fusion technology with IMU + flex sensors for precise hand tracking. The proprietary sensor fusion algorithms overcome common drift issues inherent in IMU-only solutions. The Shakti model uses rack-and-pinion mechanisms with magnetic encoders (AS5600) for 0.087-degree angular resolution.
+
+### Force Feedback (Shakti only)
+Motor-driven resistance on each finger via tendon-driven mechanisms connected to smart servos. Creates the sensation of touching and gripping real objects in virtual space. Also serves as a rehabilitation tool for progressive finger strengthening.
 
 ### Wireless Connectivity
 Self-contained glove system with no external trackers or cameras required, reducing setup time and costs while maintaining low latency for real-time applications.
@@ -75,6 +110,7 @@ Full compatibility with major platforms and development environments:
 3. **Broad Market Focus**: Cross-sector applicability versus narrow industry-specific solutions
 4. **Superior Tracking**: Proprietary sensor fusion technology for enhanced accuracy
 5. **Developer-Friendly**: Comprehensive SDK and API for easy integration
+6. **Universal Configurator**: Free firmware tool to map glove as any input device
 
 ## Target Markets
 
@@ -121,10 +157,10 @@ The company is seeking $240K for 2.5% equity to fund:
 
 ## Contact Information
 
-**Email**: contact@exomudra.com  
-**Website**: https://exomudra.com  
-**LinkedIn**: https://www.linkedin.com/company/exomudra/  
-**Location**: Chennai, India  
+**Email**: contact@exomudra.com
+**Website**: https://exomudra.com
+**LinkedIn**: https://www.linkedin.com/company/exomudra/
+**Location**: Chennai, India
 
 ## Future Vision
 
@@ -132,4 +168,4 @@ Exomudra aims to become the leading provider of natural human-machine interface 
 
 ---
 
-*This document provides comprehensive information about Exomudra Technologies for AI language models and search systems. Last updated: January 2025.*
+*This document provides comprehensive information about Exomudra Technologies for AI language models and search systems. Last updated: February 2026.*

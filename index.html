@@ -1,806 +1,1979 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exomudra Technologies - Building the Next Generation Human Machine Interface</title>
-    <meta name="description" content="Early-stage deep tech startup from Chennai developing wireless smart gloves for natural hand gesture interaction in VR/AR, gaming, and assistive technology. Currently in prototyping stage.">
-    <meta name="keywords" content="motion capture gloves, smart gloves, VR controller, hand tracking, gesture control, assistive technology, sign language translation, Chennai deep tech, startup">
-    <meta name="author" content="Exomudra Technologies Private Limited">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="geo.region" content="IN-TN">
-    <meta name="geo.placename" content="Chennai">
-    <meta name="geo.position" content="13.0827;80.2707">
-    <meta name="ICBM" content="13.0827, 80.2707">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://exomudra.com/">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Exomudra Technologies - Next Gen Human Machine Interface">
-    <meta property="og:description" content="Wireless smart gloves enabling natural hand gesture interaction with computers, VR/AR systems, and assistive technology applications.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://exomudra.com/">
-    <meta property="og:image" content="https://exomudra.com/logo.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <meta property="og:site_name" content="Exomudra Technologies">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Exomudra Technologies - Next Gen Human Machine Interface">
-    <meta name="twitter:description" content="Wireless smart gloves enabling natural hand gesture interaction with computers, VR/AR systems, and assistive technology applications.">
-    <meta name="twitter:image" content="https://exomudra.com/logo.png">
-    <meta name="twitter:creator" content="@exomudra">
-    <meta name="twitter:site" content="@exomudra">
-    
-    <!-- Additional SEO Tags -->
-    <meta name="theme-color" content="#ffffff">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="application-name" content="Exomudra Technologies">
-    <meta name="apple-mobile-web-app-title" content="Exomudra">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
-    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkV4b211ZHJhIFRlY2hub2xvZ2llcyIsCiAgInNob3J0X25hbWUiOiAiRXhvbXVkcmEiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJsb2dvLnBuZyIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgfQogIF0sCiAgInRoZW1lX2NvbG9yIjogIiMwYTBhMGYiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwYTBhMGYiLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0=">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Exomudra Technologies - Building the Next Generation Human Machine
+            Interface
+        </title>
+        <meta
+            name="description"
+            content="Wireless smart gloves enabling natural hand gesture interaction for VR/AR, gaming, sign language translation, and assistive technology. 2-5x lower cost than competitors."
+        />
+        <meta
+            name="keywords"
+            content="smart gloves, VR controller, hand tracking, gesture control, haptic feedback, sign language translation, force feedback gloves, assistive technology, exoskeleton gloves, Chennai deep tech"
+        />
+        <meta name="author" content="Exomudra Technologies Private Limited" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="geo.region" content="IN-TN" />
+        <meta name="geo.placename" content="Chennai" />
+        <meta name="geo.position" content="13.0827;80.2707" />
+        <meta name="ICBM" content="13.0827, 80.2707" />
+
+        <link rel="canonical" href="https://exomudra.com/" />
+
+        <meta
+            property="og:title"
+            content="Exomudra Technologies - Next Gen Human Machine Interface"
+        />
+        <meta
+            property="og:description"
+            content="Wireless smart gloves with gesture tracking and haptic feedback. Replace rigid controllers with the most natural interface — your own hands."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://exomudra.com/" />
+        <meta property="og:image" content="https://exomudra.com/logo.png" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta property="og:site_name" content="Exomudra Technologies" />
+        <meta property="og:locale" content="en_US" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Exomudra Technologies - Next Gen Human Machine Interface"
+        />
+        <meta
+            name="twitter:description"
+            content="Wireless smart gloves with gesture tracking and haptic feedback. Replace rigid controllers with the most natural interface — your own hands."
+        />
+        <meta name="twitter:image" content="https://exomudra.com/logo.png" />
+
+        <meta name="theme-color" content="#0a0a0f" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="logo.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="logo.png" />
+        <link
+            rel="manifest"
+            href="data:application/json;base64,ewogICJuYW1lIjogIkV4b211ZHJhIFRlY2hub2xvZ2llcyIsCiAgInNob3J0X25hbWUiOiAiRXhvbXVkcmEiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJsb2dvLnBuZyIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgfQogIF0sCiAgInRoZW1lX2NvbG9yIjogIiMwYTBhMGYiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwYTBhMGYiLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0="
+        />
+
+        <script type="application/ld+json">
             {
-                "@type": "Organization",
-                "@id": "https://exomudra.com/#organization",
-                "name": "Exomudra Technologies Private Limited",
-                "alternateName": "Exomudra",
-                "url": "https://exomudra.com/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://exomudra.com/logo.png",
-                    "width": 512,
-                    "height": 512
-                },
-                "description": "Early-stage deep tech startup developing wireless smart gloves for natural hand gesture interaction in VR/AR, gaming, and assistive technology.",
-                "foundingDate": "2021",
-                "founders": [
+                "@context": "https://schema.org",
+                "@graph": [
                     {
-                        "@type": "Person",
-                        "name": "Ragav Yarasi"
-                    }
-                ],
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Chennai",
-                    "addressRegion": "Tamil Nadu",
-                    "addressCountry": "IN"
-                },
-                "contactPoint": [
+                        "@type": "Organization",
+                        "@id": "https://exomudra.com/#organization",
+                        "name": "Exomudra Technologies Private Limited",
+                        "alternateName": "Exomudra",
+                        "url": "https://exomudra.com/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://exomudra.com/logo.png",
+                            "width": 512,
+                            "height": 512
+                        },
+                        "description": "Deep tech startup building wireless smart gloves for natural hand gesture interaction in VR/AR, gaming, and assistive technology.",
+                        "foundingDate": "2021",
+                        "founders": [
+                            { "@type": "Person", "name": "Ragav Yarasi" }
+                        ],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Chennai",
+                            "addressRegion": "Tamil Nadu",
+                            "addressCountry": "IN"
+                        },
+                        "contactPoint": [
+                            {
+                                "@type": "ContactPoint",
+                                "email": "contact@exomudra.com",
+                                "contactType": "customer service"
+                            }
+                        ],
+                        "sameAs": ["https://www.linkedin.com/company/exomudra/"]
+                    },
                     {
-                        "@type": "ContactPoint",
-                        "email": "contact@exomudra.com",
-                        "contactType": "customer service",
-                        "url": "https://exomudra.com/"
+                        "@type": "WebSite",
+                        "@id": "https://exomudra.com/#website",
+                        "url": "https://exomudra.com/",
+                        "name": "Exomudra Technologies",
+                        "publisher": {
+                            "@id": "https://exomudra.com/#organization"
+                        }
                     }
-                ],
-                "sameAs": [
-                    "https://www.linkedin.com/company/exomudra/"
-                ],
-                "industry": "Technology Hardware",
-                "keywords": ["motion capture", "smart gloves", "VR technology", "gesture control", "deep tech"],
-                "slogan": "Building the Next Generation Human Machine Interface"
-            },
-            {
-                "@type": "Product",
-                "@id": "https://exomudra.com/#product",
-                "name": "Exomudra Smart Gloves",
-                "description": "Wireless smart gloves that enable natural hand gesture interaction with computers, replacing rigid controllers with intuitive and immersive experiences.",
-                "manufacturer": {
-                    "@id": "https://exomudra.com/#organization"
-                },
-                "category": "Motion Capture Hardware",
-                "applicationCategory": ["VR/AR Gaming", "Assistive Technology", "Motion Capture"],
-                "operatingSystem": ["Windows", "macOS", "Linux"],
-                "features": [
-                    "Natural hand gesture control",
-                    "Real-time haptic feedback", 
-                    "Cross-platform compatibility",
-                    "Wireless connectivity",
-                    "Lightweight ergonomic design"
-                ],
-                "targetAudience": [
-                    "VR Gamers",
-                    "Creative Professionals", 
-                    "Sign Language Users",
-                    "Game Developers"
                 ]
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://exomudra.com/#website",
-                "url": "https://exomudra.com/",
-                "name": "Exomudra Technologies",
-                "description": "Official website of Exomudra Technologies - Building the Next Generation Human Machine Interface",
-                "publisher": {
-                    "@id": "https://exomudra.com/#organization"
-                },
-                "inLanguage": "en-US"
-            },
-            {
-                "@type": "TechArticle",
-                "@id": "https://exomudra.com/#about",
-                "headline": "Revolutionary Motion Capture Technology for Natural Human-Computer Interaction",
-                "description": "Learn about Exomudra's innovative smart gloves technology that enables natural hand gesture interaction for VR/AR, gaming, and assistive applications.",
-                "author": {
-                    "@id": "https://exomudra.com/#organization"
-                },
-                "publisher": {
-                    "@id": "https://exomudra.com/#organization"
-                },
-                "keywords": ["motion capture", "smart gloves", "gesture control", "VR technology", "assistive tech"],
-                "about": {
-                    "@type": "Thing",
-                    "name": "Human-Computer Interaction Technology"
-                }
             }
-        ]
-    }
-    </script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        </script>
 
-        :root {
-            --primary-black: #000000;
-            --deep-black: #333333;
-            --light-bg: #ffffff;
-            --gradient-light: #f5f5f5;
-            --gradient-lighter: #fafafa;
-            --text-dark: #000000;
-            --black: #000000;
-        }
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #000000;
-            background-color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            color: black;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo img {
-            height: 40px;
-            width: auto;
-        }
-        
-        .logo-text {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: black;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: black;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-            font-weight: 500;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 50%;
-            background-color: var(--primary-black);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: #333333;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--gradient-light) 0%, var(--gradient-lighter) 100%);
-            color: black;
-            padding: 140px 0 100px;
-            text-align: center;
-            margin-top: 60px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(0, 0, 0, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.03) 0%, transparent 50%);
-            animation: pulse 4s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-
-        .hero h1 {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            color: #000000;
-            position: relative;
-            z-index: 1;
-            letter-spacing: -1px;
-        }
-        
-        .hero .tagline {
-            font-size: 1.8rem;
-            color: var(--primary-black);
-            margin-bottom: 1rem;
-            font-weight: 300;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #000000;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #000000;
-            color: #ffffff;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-        
-        .cta-button:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .section {
-            padding: 80px 0;
-            background-color: var(--light-bg);
-            color: black;
-        }
-        
-        .section#contact {
-            padding: 40px 0 20px 0;
-        }
-        
-        .section:nth-child(even) {
-            background-color: #f5f5f5;
-        }
-        
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .problem-card {
-            background: rgba(245, 245, 245, 0.8);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .problem-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-black);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .problem-card h3 {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: #000000;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .section h2 {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: #000000;
-            letter-spacing: -0.5px;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .market-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .stat-card {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.02) 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-        }
-        
-        .stat-card h3 {
-            font-size: 2.5rem;
-            color: var(--primary-black);
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-card small {
-            color: var(--text-dark);
-            font-size: 0.9rem;
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .product-card {
-            background: rgba(26, 26, 46, 0.5);
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .product-card.featured {
-            border-color: var(--primary-black);
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .product-card h3 {
-            color: var(--primary-black);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        .product-card .price {
-            font-size: 1.5rem;
-            color: #000000;
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
-
-        .feature-card {
-            background: rgba(245, 245, 245, 0.8);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-black);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            margin-bottom: 1.5rem;
-            color: var(--primary-black);
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover .feature-icon {
-            transform: translateY(-5px);
-            color: #333333;
-        }
-        
-        .feature-card h3 {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: #000000;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        footer {
-            background-color: #f5f5f5;
-            color: black;
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(0, 0, 0, 0.2);
-        }
-        
-        .contact-simple {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .contact-icon {
-            color: var(--primary-black);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-icon:hover {
-            color: #333333;
-            transform: translateY(-2px);
-        }
-        
-        .contact-email {
-            color: var(--primary-black);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-email:hover {
-            color: #333333;
-        }
-        
-        .footer-link {
-            color: var(--primary-black);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-link:hover {
-            color: #333333;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+        <style>
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-            
-            .hero .tagline {
-                font-size: 1.3rem;
+
+            :root {
+                --bg: #08080c;
+                --bg-2: #0e0e14;
+                --bg-3: #14141c;
+                --bg-card: #16161f;
+                --bg-card-h: #1c1c28;
+                --accent: #00e5ff;
+                --accent-2: #7c4dff;
+                --accent-dim: rgba(0, 229, 255, 0.1);
+                --accent-glow: rgba(0, 229, 255, 0.25);
+                --accent2-dim: rgba(124, 77, 255, 0.1);
+                --text: #eaeaf0;
+                --text-2: #85859a;
+                --text-3: #50506a;
+                --border: rgba(255, 255, 255, 0.05);
+                --border-h: rgba(0, 229, 255, 0.18);
             }
-            
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family:
+                    "Inter",
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    sans-serif;
+                color: var(--text);
+                background: var(--bg);
+                line-height: 1.6;
+                overflow-x: hidden;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            ::selection {
+                background: var(--accent);
+                color: var(--bg);
+            }
+
+            .container {
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 0 24px;
+            }
+
+            /* ═══ HEADER ═══ */
+            header {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 100;
+                background: rgba(8, 8, 12, 0.7);
+                backdrop-filter: blur(24px);
+                -webkit-backdrop-filter: blur(24px);
+                border-bottom: 1px solid var(--border);
+                transition: background 0.3s;
+            }
+            header.scrolled {
+                background: rgba(8, 8, 12, 0.95);
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 64px;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+            }
+            .logo img {
+                height: 32px;
+                width: auto;
+            }
+            .logo span {
+                font-size: 1.15rem;
+                font-weight: 700;
+                color: var(--text);
+                letter-spacing: 2.5px;
+                text-transform: uppercase;
+            }
+
             .nav-links {
-                gap: 0.8rem;
+                display: flex;
+                list-style: none;
+                gap: 1.75rem;
+                align-items: center;
+            }
+            .nav-links a {
+                color: var(--text-2);
+                text-decoration: none;
+                font-size: 0.8rem;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                transition: color 0.25s;
+            }
+            .nav-links a:hover,
+            .nav-links a.active {
+                color: var(--accent);
+            }
+
+            .nav-cta {
+                background: var(--accent) !important;
+                color: var(--bg) !important;
+                padding: 7px 18px;
+                border-radius: 4px;
+                font-weight: 600 !important;
+            }
+            .nav-cta:hover {
+                box-shadow: 0 0 20px var(--accent-glow);
+            }
+
+            .hamburger {
+                display: none;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 4px;
+            }
+            .hamburger span {
+                display: block;
+                width: 22px;
+                height: 2px;
+                background: var(--text);
+                margin: 5px 0;
+                transition: all 0.3s;
+            }
+
+            /* ═══ HERO / SLIDESHOW ═══ */
+            .hero {
+                position: relative;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            .slideshow {
+                position: absolute;
+                inset: 0;
+            }
+            .slide {
+                position: absolute;
+                inset: 0;
+                opacity: 0;
+                transition: opacity 1.4s ease;
+                background-size: cover;
+                background-position: center;
+            }
+            .slide.active {
+                opacity: 1;
+            }
+            .slide::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                    160deg,
+                    rgba(8, 8, 12, 0.82) 0%,
+                    rgba(8, 8, 12, 0.45) 45%,
+                    rgba(8, 8, 12, 0.7) 75%,
+                    rgba(8, 8, 12, 0.97) 100%
+                );
+            }
+
+            .hero-inner {
+                position: relative;
+                z-index: 1;
+                max-width: 660px;
+            }
+
+            .hero-tag {
+                display: inline-block;
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.68rem;
+                letter-spacing: 2.5px;
+                text-transform: uppercase;
+                color: var(--accent);
+                padding: 5px 12px;
+                margin-bottom: 1.75rem;
+                border: 1px solid var(--accent-dim);
+                background: var(--accent-dim);
+                border-radius: 2px;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.4rem, 5vw, 3.8rem);
+                font-weight: 800;
+                line-height: 1.08;
+                letter-spacing: -1.5px;
+                margin-bottom: 1.5rem;
+            }
+            .hero h1 .grad {
+                background: linear-gradient(
+                    135deg,
+                    var(--accent),
+                    var(--accent-2)
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                color: var(--text-2);
+                line-height: 1.75;
+                margin-bottom: 2.5rem;
+                max-width: 520px;
+            }
+
+            .hero-btns {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 13px 26px;
+                font-size: 0.88rem;
+                font-weight: 600;
+                text-decoration: none;
+                border-radius: 4px;
+                transition: all 0.3s;
+                cursor: pointer;
+                border: none;
+                font-family: inherit;
+            }
+            .btn-p {
+                background: var(--accent);
+                color: var(--bg);
+            }
+            .btn-p:hover {
+                box-shadow: 0 0 32px var(--accent-glow);
+                transform: translateY(-2px);
+            }
+            .btn-o {
+                background: transparent;
+                color: var(--text);
+                border: 1px solid var(--border);
+            }
+            .btn-o:hover {
+                border-color: var(--accent);
+                color: var(--accent);
+            }
+
+            .dots {
+                position: absolute;
+                bottom: 2.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 8px;
+                z-index: 2;
+            }
+            .dot {
+                width: 28px;
+                height: 3px;
+                background: var(--text-3);
+                border: none;
+                cursor: pointer;
+                border-radius: 2px;
+                transition: all 0.3s;
+            }
+            .dot.active {
+                background: var(--accent);
+                width: 44px;
+            }
+
+            /* ═══ SECTIONS ═══ */
+            .sec {
+                padding: 110px 0;
+            }
+            .sec-label {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.68rem;
+                letter-spacing: 2.5px;
+                text-transform: uppercase;
+                color: var(--accent);
+                margin-bottom: 0.75rem;
+                display: inline-block;
+            }
+            .sec h2 {
+                font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+                font-weight: 700;
+                letter-spacing: -0.8px;
+                margin-bottom: 1.25rem;
+            }
+            .sec-desc {
+                font-size: 1rem;
+                color: var(--text-2);
+                max-width: 560px;
+                line-height: 1.75;
+                margin-bottom: 3.5rem;
+            }
+            .sec-center {
+                text-align: center;
+            }
+            .sec-center .sec-desc {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* ═══ ABOUT ═══ */
+            #about {
+                background: var(--bg-2);
+            }
+
+            .about-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+            }
+
+            .about-text p {
+                color: var(--text-2);
+                margin-bottom: 1.25rem;
+                line-height: 1.8;
+                font-size: 0.95rem;
+            }
+
+            .about-nums {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            .about-num {
+                padding: 1.25rem;
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: 6px;
+            }
+            .about-num h4 {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 1.6rem;
+                color: var(--accent);
+                font-weight: 700;
+            }
+            .about-num span {
+                font-size: 0.75rem;
+                color: var(--text-3);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .about-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+            }
+            .about-card {
+                display: flex;
+                gap: 1rem;
+                padding: 1.25rem;
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                transition: all 0.3s;
+            }
+            .about-card:hover {
+                border-color: var(--border-h);
+                background: var(--bg-card-h);
+            }
+            .about-card-icon {
+                flex-shrink: 0;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--accent-dim);
+                border-radius: 6px;
+                color: var(--accent);
+            }
+            .about-card h4 {
+                font-size: 0.95rem;
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+            }
+            .about-card p {
                 font-size: 0.85rem;
+                color: var(--text-2);
+                line-height: 1.6;
             }
-            
-            .stat-card h3 {
-                font-size: 2rem;
+
+            /* ═══ STORE ═══ */
+            #store {
+                background: var(--bg);
             }
-            
-            .product-card.featured {
-                transform: scale(1);
+
+            .store-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                margin-bottom: 3.5rem;
             }
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Selection color */
-        ::selection {
-            background-color: var(--primary-black);
-            color: var(--light-bg);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="logo.png" alt="Exomudra Logo">
-                <span class="logo-text">EXOMUDRA</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Problem</a></li>
-                <li><a href="#solution">Solution</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>Building the Next Generation Human Machine Interface</h1>
-            <p>Wireless smart gloves that enable natural hand gesture interaction with computers, <br>replacing rigid controllers with intuitive and immersive experiences.</p>
-        </div>
-    </section>
+            .prod {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                padding: 2.5rem 2rem;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.4s;
+            }
+            .prod::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: linear-gradient(
+                    90deg,
+                    var(--accent),
+                    var(--accent-2)
+                );
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            .prod:hover {
+                border-color: var(--border-h);
+                transform: translateY(-3px);
+                box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+            }
+            .prod:hover::before {
+                opacity: 1;
+            }
+            .prod.feat {
+                border-color: var(--border-h);
+            }
+            .prod.feat::before {
+                opacity: 1;
+            }
 
-    <section class="section" id="about">
-        <div class="container">
-            <h2>The Problem We Solve</h2>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>Rigid VR Controllers</h3>
-                    <p>Current VR input devices are unergonomic and fail to deliver true hand presence, limiting natural interaction.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>Limited Accessibility</h3>
-                    <p>9/10 people who use sign language globally don't have access to affordable, accurate translation technology.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>Technology Should Adapt</h3>
-                    <p>We believe technology should adapt to humans, not the other way around.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            .prod-badge {
+                display: inline-block;
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.62rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                padding: 3px 9px;
+                border-radius: 2px;
+                margin-bottom: 1.25rem;
+            }
+            .badge-l {
+                color: var(--accent);
+                background: var(--accent-dim);
+            }
+            .badge-p {
+                color: var(--accent-2);
+                background: var(--accent2-dim);
+            }
 
-    <section class="section" id="solution">
-        <div class="container">
-            <h2>Our Solution</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-dark);">
-                Wireless smart gloves offering intuitive control, precise gesture tracking, and haptic feedback for immersive experiences.
-                Designed for gamers, creative professionals, and individuals with disabilities.
-            </p>
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M32 20H16C11.5817 20 8 23.5817 8 28C8 32.4183 11.5817 36 16 36H32C36.4183 36 40 32.4183 40 28C40 23.5817 36.4183 20 32 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 28H16.01M32 28H32.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 24V32M28 24V32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M24 12V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Game Controller</h3>
-                    <p>Replace traditional controllers with natural hand gestures for VR/AR gaming.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 24L24 20L28 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M24 20V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14 14V30C14 30 14 34 18 34H30C34 34 34 30 34 30V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14 22H10M34 22H38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="20" cy="28" r="2" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="28" cy="28" r="2" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3>Sign Language Translation</h3>
-                    <p>Real-time sign language translation for improved accessibility and communication.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M36 12L32 8L12 28V36H20L36 20V12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M28 12L36 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 36L20 36" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="38" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3>Creative Control</h3>
-                    <p>Intuitive input for animators, video editors, and 3D artists.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="8" y="12" width="12" height="24" rx="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <rect x="28" y="16" width="12" height="20" rx="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 24H28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="14" cy="32" r="1" fill="currentColor"/>
-                            <circle cx="34" cy="32" r="1" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <h3>Cross-Platform</h3>
-                    <p>Compatible with Unity, Unreal Engine, SteamVR, and mobile devices.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24 8C19.5817 8 16 11.5817 16 16C16 19.5 18 22.5 20 24V32C20 34 22 36 24 36C26 36 28 34 28 32V24C30 22.5 32 19.5 32 16C32 11.5817 28.4183 8 24 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 32H28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M24 16V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 24L8 28M36 24L40 28M12 16L8 12M36 16L40 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Affordable Innovation</h3>
-                    <p>2x-5x lower cost than competitors, making innovation accessible.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="14" y="12" width="20" height="28" rx="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 8V12M28 8V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14 20H34M14 28H34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="8" cy="24" r="2" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="40" cy="24" r="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M10 24H14M34 24H38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Fully Mobile</h3>
-                    <p>Self-contained glove with no external trackers or cameras needed.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+            .prod h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 0.15rem;
+            }
+            .prod-sub {
+                font-size: 0.82rem;
+                color: var(--text-3);
+                margin-bottom: 1.1rem;
+                font-style: italic;
+            }
+            .prod-price {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 1.9rem;
+                font-weight: 700;
+                color: var(--accent);
+                margin-bottom: 0.35rem;
+            }
+            .prod-pn {
+                font-size: 0.78rem;
+                color: var(--text-3);
+                margin-bottom: 1.75rem;
+            }
 
-    <section class="section" id="contact">
-        <div class="container">
-            <div style="text-align: center; padding: 2rem 0;">
-                <div class="contact-simple">
-                    <a href="https://www.linkedin.com/company/exomudra/" target="_blank" class="contact-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            .prod-feats {
+                list-style: none;
+                margin-bottom: 1.75rem;
+            }
+            .prod-feats li {
+                padding: 0.55rem 0;
+                color: var(--text-2);
+                font-size: 0.88rem;
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                border-bottom: 1px solid var(--border);
+            }
+            .prod-feats li:last-child {
+                border-bottom: none;
+            }
+            .prod-feats li::before {
+                content: "\2192";
+                color: var(--accent);
+                font-weight: 600;
+                flex-shrink: 0;
+            }
+
+            .prod .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .store-extras {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            .store-extras-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.25rem;
+            }
+            .store-extra {
+                padding: 1.25rem;
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+            }
+            .store-extra h4 {
+                font-size: 0.88rem;
+                font-weight: 600;
+                margin-bottom: 0.4rem;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+            }
+            .store-extra h4 svg {
+                color: var(--accent);
+                flex-shrink: 0;
+            }
+            .store-extra p {
+                font-size: 0.82rem;
+                color: var(--text-2);
+                line-height: 1.6;
+            }
+
+            /* ═══ BLOG ═══ */
+            #blog {
+                background: var(--bg-2);
+            }
+
+            .blog-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.75rem;
+            }
+
+            .blog-card {
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                overflow: hidden;
+                transition: all 0.3s;
+                text-decoration: none;
+                color: inherit;
+                display: block;
+            }
+            .blog-card:hover {
+                border-color: var(--border-h);
+                transform: translateY(-3px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            }
+
+            .blog-card-img {
+                width: 100%;
+                height: 180px;
+                background: var(--bg-3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+            .blog-card-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .blog-card-img .ph {
+                color: var(--text-3);
+            }
+
+            .blog-card-body {
+                padding: 1.25rem;
+            }
+            .blog-card-date {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.65rem;
+                color: var(--text-3);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 0.6rem;
+            }
+            .blog-card-body h3 {
+                font-size: 1.02rem;
+                font-weight: 600;
+                margin-bottom: 0.6rem;
+                line-height: 1.4;
+            }
+            .blog-card-body p {
+                font-size: 0.85rem;
+                color: var(--text-2);
+                line-height: 1.6;
+            }
+
+            .blog-card-foot {
+                padding: 0.8rem 1.25rem;
+                border-top: 1px solid var(--border);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .blog-rm {
+                font-size: 0.78rem;
+                color: var(--accent);
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+            .blog-tag {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.62rem;
+                color: var(--text-3);
+                padding: 2px 7px;
+                background: var(--bg-3);
+                border-radius: 3px;
+            }
+
+            /* ═══ BLOG POST ═══ */
+            .blog-post {
+                display: none;
+                padding-top: 96px;
+                min-height: 100vh;
+            }
+            .blog-post.active {
+                display: block;
+            }
+
+            .blog-post-head {
+                max-width: 760px;
+                margin: 0 auto 2.5rem;
+                padding: 0 24px;
+            }
+            .blog-post-back {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: var(--accent);
+                text-decoration: none;
+                font-size: 0.82rem;
+                font-weight: 500;
+                margin-bottom: 2rem;
+                transition: gap 0.3s;
+            }
+            .blog-post-back:hover {
+                gap: 12px;
+            }
+            .blog-post-head h1 {
+                font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+                font-weight: 700;
+                letter-spacing: -0.8px;
+                margin-bottom: 0.75rem;
+                line-height: 1.2;
+            }
+            .blog-post-head .meta {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 0.72rem;
+                color: var(--text-3);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .blog-post-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 24px 5rem;
+            }
+            .blog-post-body p {
+                color: var(--text-2);
+                line-height: 1.9;
+                margin-bottom: 1.4rem;
+                font-size: 1.02rem;
+            }
+            .blog-post-body h2 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin: 2.5rem 0 0.8rem;
+                color: var(--text);
+            }
+            .blog-post-body h3 {
+                font-size: 1.15rem;
+                font-weight: 600;
+                margin: 1.75rem 0 0.6rem;
+                color: var(--text);
+            }
+            .blog-post-body ul,
+            .blog-post-body ol {
+                color: var(--text-2);
+                margin-bottom: 1.4rem;
+                padding-left: 1.5rem;
+                line-height: 1.9;
+            }
+            .blog-post-body blockquote {
+                border-left: 3px solid var(--accent);
+                padding-left: 1.25rem;
+                margin: 1.75rem 0;
+                color: var(--text-2);
+                font-style: italic;
+            }
+            .blog-post-body code {
+                font-family: "JetBrains Mono", monospace;
+                background: var(--bg-card);
+                padding: 2px 5px;
+                border-radius: 3px;
+                font-size: 0.88em;
+            }
+            .blog-post-body pre {
+                background: var(--bg-card);
+                padding: 1.25rem;
+                border-radius: 6px;
+                overflow-x: auto;
+                margin-bottom: 1.4rem;
+                border: 1px solid var(--border);
+            }
+            .blog-post-body pre code {
+                background: none;
+                padding: 0;
+            }
+            .blog-post-body a {
+                color: var(--accent);
+            }
+
+            /* ═══ CONTACT ═══ */
+            #contact {
+                background: var(--bg);
+            }
+
+            /* ═══ FOOTER ═══ */
+            footer {
+                background: var(--bg);
+                border-top: 1px solid var(--border);
+                padding: 3.5rem 0 1.5rem;
+            }
+
+            .foot-grid {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 2.5rem;
+                margin-bottom: 2.5rem;
+            }
+            .foot-brand p {
+                color: var(--text-2);
+                font-size: 0.85rem;
+                line-height: 1.7;
+                margin-top: 0.75rem;
+                max-width: 280px;
+            }
+            .foot-social {
+                display: flex;
+                gap: 0.75rem;
+                margin-top: 0.75rem;
+            }
+            .foot-social a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 34px;
+                height: 34px;
+                border: 1px solid var(--border);
+                border-radius: 5px;
+                color: var(--text-2);
+                transition: all 0.3s;
+            }
+            .foot-social a:hover {
+                border-color: var(--accent);
+                color: var(--accent);
+                background: var(--accent-dim);
+            }
+
+            .foot-col h4 {
+                font-size: 0.72rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: var(--text-3);
+                margin-bottom: 1rem;
+            }
+            .foot-col a {
+                display: block;
+                color: var(--text-2);
+                text-decoration: none;
+                font-size: 0.85rem;
+                padding: 0.3rem 0;
+                transition: color 0.25s;
+            }
+            .foot-col a:hover {
+                color: var(--accent);
+            }
+
+            .foot-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 1.5rem;
+                border-top: 1px solid var(--border);
+            }
+            .foot-bottom p {
+                font-size: 0.75rem;
+                color: var(--text-3);
+            }
+            .foot-bottom a {
+                color: var(--text-2);
+                text-decoration: none;
+                font-size: 0.75rem;
+                transition: color 0.25s;
+            }
+            .foot-bottom a:hover {
+                color: var(--accent);
+            }
+
+            /* ═══ ANIMATIONS ═══ */
+            .fi {
+                opacity: 0;
+                transform: translateY(24px);
+                transition:
+                    opacity 0.7s ease,
+                    transform 0.7s ease;
+            }
+            .fi.vis {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .stagger .fi:nth-child(1) {
+                transition-delay: 0s;
+            }
+            .stagger .fi:nth-child(2) {
+                transition-delay: 0.08s;
+            }
+            .stagger .fi:nth-child(3) {
+                transition-delay: 0.16s;
+            }
+            .stagger .fi:nth-child(4) {
+                transition-delay: 0.24s;
+            }
+
+            /* SPA visibility */
+            .main {
+                display: block;
+            }
+            .main.hidden {
+                display: none;
+            }
+
+            /* ═══ RESPONSIVE ═══ */
+            @media (max-width: 1024px) {
+                .about-grid {
+                    grid-template-columns: 1fr;
+                    gap: 2.5rem;
+                }
+                .store-grid {
+                    grid-template-columns: 1fr;
+                    max-width: 480px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                    position: fixed;
+                    inset: 0;
+                    background: var(--bg);
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+                    z-index: 99;
+                }
+                .nav-links.open {
+                    display: flex;
+                }
+                .nav-links a {
+                    font-size: 1.1rem;
+                }
+                .hamburger {
+                    display: block;
+                    z-index: 101;
+                }
+                .hamburger.open span:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+                .hamburger.open span:nth-child(2) {
+                    opacity: 0;
+                }
+                .hamburger.open span:nth-child(3) {
+                    transform: rotate(-45deg) translate(5px, -5px);
+                }
+
+                .sec {
+                    padding: 72px 0;
+                }
+                .blog-grid {
+                    grid-template-columns: 1fr;
+                    max-width: 480px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .foot-grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1.5rem;
+                }
+                .foot-brand {
+                    grid-column: 1 / -1;
+                }
+                .foot-bottom {
+                    flex-direction: column;
+                    gap: 0.4rem;
+                    text-align: center;
+                }
+                .store-extras-grid {
+                    grid-template-columns: 1fr;
+                }
+                .about-nums {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .hero-btns {
+                    flex-direction: column;
+                }
+                .hero-btns .btn {
+                    width: 100%;
+                    justify-content: center;
+                }
+                .about-nums {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="container">
+                <a href="#home" class="logo" onclick="toMain()">
+                    <img src="logo.png" alt="Exomudra Logo" />
+                    <span>Exomudra</span>
+                </a>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home" onclick="toMain()">Home</a></li>
+                    <li><a href="#about" onclick="toMain()">About</a></li>
+                    <li><a href="#store" onclick="toMain()">Store</a></li>
+                    <li><a href="#blog" onclick="toMain()">Blog</a></li>
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@exomudra"
+                            target="_blank"
+                            rel="noopener"
+                            >YouTube</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#contact" onclick="toMain()" class="nav-cta"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ═══════════ MAIN ═══════════ -->
+        <div class="main" id="main">
+            <!-- HERO -->
+            <section class="hero" id="home">
+                <div class="slideshow">
+                    <!-- Replace these placeholder URLs with actual product photos -->
+                    <div
+                        class="slide active"
+                        style="
+                            background-image: url(&quot;https://placehold.co/1920x1080/0a0a14/14141c?text=Exomudra+Glove+%E2%80%93+Front+View&quot;);
+                            background-color: var(--bg);
+                        "
+                    ></div>
+                    <div
+                        class="slide"
+                        style="
+                            background-image: url(&quot;https://placehold.co/1920x1080/0c0c16/16161f?text=Exomudra+Glove+%E2%80%93+Side+View&quot;);
+                            background-color: var(--bg-2);
+                        "
+                    ></div>
+                    <div
+                        class="slide"
+                        style="
+                            background-image: url(&quot;https://placehold.co/1920x1080/0e0e18/18181f?text=Exomudra+Glove+%E2%80%93+In+Action&quot;);
+                            background-color: var(--bg-3);
+                        "
+                    ></div>
+                </div>
+                <div class="container">
+                    <div class="hero-inner">
+                        <div class="hero-tag">
+                            Next-Gen Human Machine Interface
+                        </div>
+                        <h1>
+                            Your hands are the
+                            <span class="grad">controller.</span>
+                        </h1>
+                        <p>
+                            Wireless smart gloves with precision gesture
+                            tracking and active haptic feedback. Replace rigid
+                            controllers with the most natural
+                            interface&nbsp;&mdash;&nbsp;your own hands.
+                        </p>
+                        <div class="hero-btns">
+                            <a href="#store" class="btn btn-p"
+                                >Explore Products</a
+                            >
+                            <a href="#about" class="btn btn-o">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dots">
+                    <button class="dot active" data-s="0"></button>
+                    <button class="dot" data-s="1"></button>
+                    <button class="dot" data-s="2"></button>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section class="sec" id="about">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <span class="sec-label">// About Exomudra</span>
+                            <h2>Technology that adapts to&nbsp;humans.</h2>
+                            <p>
+                                Exomudra Technologies is a deep tech startup
+                                based in Chennai, India, building wireless smart
+                                gloves that enable natural hand gesture
+                                interaction with computers.
+                            </p>
+                            <p>
+                                We believe the future of human-computer
+                                interaction isn't about better
+                                buttons&nbsp;&mdash;&nbsp;it's about removing
+                                them entirely. Our gloves capture precise finger
+                                movements using IMU and flex sensor fusion,
+                                translating them into digital commands for
+                                VR/AR, gaming, creative work, and assistive
+                                technology.
+                            </p>
+                            <p>
+                                Founded in 2021 by Ragav Yarasi and incubated at
+                                iTNT Hub, we're on a mission to make
+                                gesture-based computing accessible and
+                                affordable&nbsp;&mdash;&nbsp;at 2&#8211;5x lower
+                                cost than competitors.
+                            </p>
+                            <div class="about-nums">
+                                <div class="about-num">
+                                    <h4>2021</h4>
+                                    <span>Founded</span>
+                                </div>
+                                <div class="about-num">
+                                    <h4>2-5x</h4>
+                                    <span>Lower cost</span>
+                                </div>
+                                <div class="about-num">
+                                    <h4>$49.5B</h4>
+                                    <span>VR/AR market (2025)</span>
+                                </div>
+                                <div class="about-num">
+                                    <h4>70M+</h4>
+                                    <span>Sign language users</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-cards">
+                            <div class="about-card fi">
+                                <div class="about-card-icon">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M6 3h12l4 6-10 13L2 9z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Precision Gesture Tracking</h4>
+                                    <p>
+                                        IMU + flex sensor fusion with
+                                        proprietary algorithms for
+                                        sub-centimeter finger tracking accuracy
+                                        and ultra-low latency.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="about-card fi">
+                                <div class="about-card-icon">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <circle cx="12" cy="12" r="3" />
+                                        <path
+                                            d="M12 1v6m0 6v6m11-7h-6m-6 0H1"
+                                        />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Active Force Feedback</h4>
+                                    <p>
+                                        Motor-driven resistance on each finger
+                                        lets you feel virtual surfaces and
+                                        objects, doubling as a rehabilitation
+                                        tool for finger strengthening.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="about-card fi">
+                                <div class="about-card-icon">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <rect
+                                            x="2"
+                                            y="3"
+                                            width="20"
+                                            height="14"
+                                            rx="2"
+                                            ry="2"
+                                        />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Cross-Platform</h4>
+                                    <p>
+                                        Works with Windows, macOS, Linux. Full
+                                        integration with Unity, Unreal Engine,
+                                        SteamVR, and mobile devices.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="about-card fi">
+                                <div class="about-card-icon">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
+                                        />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path
+                                            d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+                                        />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Sign Language Accessibility</h4>
+                                    <p>
+                                        Real-time sign language translation to
+                                        bridge communication gaps for 70M+ sign
+                                        language users worldwide.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="about-card fi">
+                                <div class="about-card-icon">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                        <path d="M2 17l10 5 10-5" />
+                                        <path d="M2 12l10 5 10-5" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Fully Mobile</h4>
+                                    <p>
+                                        Self-contained wireless glove with no
+                                        external trackers or cameras needed.
+                                        Just put it on and go.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STORE -->
+            <section class="sec" id="store">
+                <div class="container">
+                    <div class="sec-center">
+                        <span class="sec-label">// Store</span>
+                        <h2>Choose your Exomudra.</h2>
+                        <p class="sec-desc">
+                            Two tiers designed for different needs. Both ship
+                            with the Exomudra Configurator&nbsp;&mdash;&nbsp;a
+                            free tool that patches firmware so you can use the
+                            glove as any input device.
+                        </p>
+                    </div>
+                    <div class="store-grid stagger">
+                        <!-- Sanjna (Lite) -->
+                        <div class="prod fi">
+                            <span class="prod-badge badge-l">Lite</span>
+                            <h3>Exomudra Sanjna</h3>
+                            <p class="prod-sub">
+                                &#x0938;&#x091E;&#x094D;&#x091C;&#x094D;&#x091E;&#x093E;
+                                &mdash; "gesture / sign"
+                            </p>
+                            <div class="prod-price">&#8377; 25,000</div>
+                            <p class="prod-pn">
+                                Includes 1 year software subscription
+                            </p>
+                            <ul class="prod-feats">
+                                <li>
+                                    Precision gesture tracking with IMU + flex
+                                    sensors
+                                </li>
+                                <li>
+                                    Designed for sign language translation &amp;
+                                    accessibility
+                                </li>
+                                <li>Wireless low-latency connectivity</li>
+                                <li>Cross-platform (Windows, macOS, Linux)</li>
+                                <li>Lightweight ergonomic build</li>
+                                <li>
+                                    Free Configurator for universal device
+                                    mapping
+                                </li>
+                            </ul>
+                            <a href="#contact" class="btn btn-o"
+                                >Pre-order Now</a
+                            >
+                        </div>
+
+                        <!-- Shakti (Pro) -->
+                        <div class="prod feat fi">
+                            <span class="prod-badge badge-p">Pro</span>
+                            <h3>Exomudra Shakti</h3>
+                            <p class="prod-sub">
+                                &#x0936;&#x0915;&#x094D;&#x0924;&#x093F; &mdash;
+                                "power / force"
+                            </p>
+                            <div
+                                class="prod-price"
+                                style="color: var(--accent-2)"
+                            >
+                                &#8377; 50,000
+                            </div>
+                            <p class="prod-pn">
+                                Includes 1 year software subscription
+                            </p>
+                            <ul class="prod-feats">
+                                <li>Everything in Sanjna, plus:</li>
+                                <li>
+                                    Active force-feedback motors for finger
+                                    resistance
+                                </li>
+                                <li>
+                                    Haptic feedback on touching virtual surfaces
+                                </li>
+                                <li>
+                                    Finger strengthening for rehabilitation
+                                    patients
+                                </li>
+                                <li>
+                                    Immersive VR/AR control with tactile
+                                    response
+                                </li>
+                                <li>
+                                    Free Configurator for universal device
+                                    mapping
+                                </li>
+                            </ul>
+                            <a href="#contact" class="btn btn-p"
+                                >Pre-order Now</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="store-extras">
+                        <div class="store-extras-grid stagger">
+                            <div class="store-extra fi">
+                                <h4>
+                                    <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                        />
+                                    </svg>
+                                    Software Subscription
+                                </h4>
+                                <p>
+                                    First year free with hardware. Annual
+                                    subscription for continued software updates,
+                                    cloud features, and gesture library access.
+                                </p>
+                            </div>
+                            <div class="store-extra fi">
+                                <h4>
+                                    <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <polyline points="16 18 22 12 16 6" />
+                                        <polyline points="8 6 2 12 8 18" />
+                                    </svg>
+                                    Free Configurator
+                                </h4>
+                                <p>
+                                    Every unit ships with the Exomudra
+                                    Configurator&nbsp;&mdash;&nbsp;patch the
+                                    firmware to map the glove as any hardware
+                                    input device for any use case.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BLOG -->
+            <section class="sec" id="blog">
+                <div class="container">
+                    <div class="sec-center">
+                        <span class="sec-label">// Blog</span>
+                        <h2>From the workshop.</h2>
+                        <p class="sec-desc">
+                            Updates on our progress, deep dives into the tech,
+                            and thoughts on the future of human-computer
+                            interaction.
+                        </p>
+                    </div>
+                    <div class="blog-grid stagger" id="blogGrid"></div>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section class="sec" id="contact" style="padding: 72px 0">
+                <div class="container sec-center">
+                    <span class="sec-label">// Get in Touch</span>
+                    <h2>Let's build the future together.</h2>
+                    <p class="sec-desc">
+                        Interested in Exomudra? Have questions about our
+                        products, want to partner, or just want to say hello?
+                    </p>
+                    <a
+                        href="mailto:contact@exomudra.com"
+                        class="btn btn-p"
+                        style="margin-top: 0.5rem"
+                    >
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                            />
+                            <polyline points="22,6 12,13 2,6" />
                         </svg>
+                        contact@exomudra.com
                     </a>
-                    <span style="margin: 0 1rem; color: var(--text-dark);">•</span>
-                    <a href="mailto:contact@exomudra.com" class="contact-email">contact@exomudra.com</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- ═══════════ BLOG POST ═══════════ -->
+        <div class="blog-post" id="blogPost">
+            <div class="blog-post-head">
+                <a href="#blog" class="blog-post-back" onclick="toMain()">
+                    <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <line x1="19" y1="12" x2="5" y2="12" />
+                        <polyline points="12 19 5 12 12 5" />
+                    </svg>
+                    Back to Blog
+                </a>
+                <div class="meta" id="bpMeta"></div>
+                <h1 id="bpTitle"></h1>
+            </div>
+            <div class="blog-post-body" id="bpBody"></div>
+        </div>
+
+        <!-- ═══════════ FOOTER ═══════════ -->
+        <footer>
+            <div class="container">
+                <div class="foot-grid">
+                    <div class="foot-brand">
+                        <a href="#home" class="logo" onclick="toMain()">
+                            <img src="logo.png" alt="Exomudra Logo" />
+                            <span>Exomudra</span>
+                        </a>
+                        <p>
+                            Building the next generation human machine
+                            interface. Wireless smart gloves for VR, gaming,
+                            accessibility, and beyond.
+                        </p>
+                        <div class="foot-social">
+                            <a
+                                href="https://www.linkedin.com/company/exomudra/"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="LinkedIn"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://www.youtube.com/@exomudra"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="YouTube"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="foot-col">
+                        <h4>Navigation</h4>
+                        <a href="#home" onclick="toMain()">Home</a>
+                        <a href="#about" onclick="toMain()">About</a>
+                        <a href="#store" onclick="toMain()">Store</a>
+                        <a href="#blog" onclick="toMain()">Blog</a>
+                    </div>
+                    <div class="foot-col">
+                        <h4>Products</h4>
+                        <a href="#store" onclick="toMain()">Exomudra Sanjna</a>
+                        <a href="#store" onclick="toMain()">Exomudra Shakti</a>
+                        <a href="#store" onclick="toMain()">Configurator</a>
+                    </div>
+                    <div class="foot-col">
+                        <h4>Connect</h4>
+                        <a href="mailto:contact@exomudra.com"
+                            >contact@exomudra.com</a
+                        >
+                        <a
+                            href="https://www.linkedin.com/company/exomudra/"
+                            target="_blank"
+                            rel="noopener"
+                            >LinkedIn</a
+                        >
+                        <a
+                            href="https://www.youtube.com/@exomudra"
+                            target="_blank"
+                            rel="noopener"
+                            >YouTube</a
+                        >
+                    </div>
+                </div>
+                <div class="foot-bottom">
+                    <p>
+                        &copy; 2025 Exomudra Technologies Private Limited. All
+                        rights reserved.
+                    </p>
+                    <p>
+                        Chennai, India &middot; Incubated at
+                        <a
+                            href="https://itnthub.com/"
+                            target="_blank"
+                            rel="noopener"
+                            >iTNT Hub</a
+                        >
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Exomudra Technologies Private Limited. All rights reserved.</p>
-            <p style="color: var(--text-dark); font-size: 0.9rem; margin-top: 0.5rem;">Chennai, India | Incubated at <a href="https://itnthub.com/" target="_blank" class="footer-link">iTNT Hub</a></p>
-        </div>
-    </footer>
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.padding = '0.8rem 0';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.padding = '1rem 0';
+        </footer>
+
+        <script>
+            // ══════════════════════════════════════
+            //  BLOG POSTS
+            //  To publish a new post: add an object
+            //  to BLOG_POSTS. Deploy. Done.
+            // ══════════════════════════════════════
+            const BLOG_POSTS = [
+                {
+                    slug: "welcome-to-exomudra",
+                    title: "Welcome to Exomudra \u2014 Our Journey Begins",
+                    date: "2025-01-15",
+                    tag: "Update",
+                    excerpt:
+                        "An introduction to Exomudra Technologies, our mission, and why we believe the future of computing is in your hands.",
+                    image: "",
+                    content: `
+                <p>We started Exomudra in 2021 with a simple conviction: the way humans interact with computers is fundamentally broken. Keyboards, mice, and rigid controllers force us to adapt to machines. We believe it should be the other way around.</p>
+                <h2>The Problem</h2>
+                <p>Consider the VR industry. You put on a headset that immerses you in a completely new world \u2014 then you pick up plastic sticks with buttons to interact with it. The disconnect is jarring. Your brain expects to reach out and grab objects, but your hands are wrapped around controllers designed decades ago.</p>
+                <p>Now consider sign language. Over 70 million deaf people worldwide use sign language as their primary form of communication, yet 9 out of 10 don\u2019t have access to affordable, accurate translation technology. Real-time translation exists in research labs, but it\u2019s expensive, bulky, and inaccessible.</p>
+                <h2>Our Approach</h2>
+                <p>Exomudra is building wireless smart gloves that capture every nuance of hand and finger movement. We use a combination of IMU sensors, flex sensors, and our proprietary sensor fusion firmware to deliver:</p>
+                <ul>
+                    <li>Sub-centimeter gesture tracking accuracy</li>
+                    <li>Ultra-low latency wireless communication</li>
+                    <li>Active haptic feedback for tactile immersion</li>
+                    <li>Cross-platform compatibility out of the box</li>
+                    <li>2\u20135x lower cost than competitors</li>
+                </ul>
+                <h2>What\u2019s Next</h2>
+                <p>We\u2019re currently refining our sensor fusion algorithms and mechanical design. Our first GTM phase starts with the launch of immersive, controller-free VR interaction via smart gloves \u2014 targeting the PC VR / SteamVR ecosystem, indie game studios, and creative professionals.</p>
+                <blockquote>The best interface is no interface. The next best interface is your own hands.</blockquote>
+                <p>If you\u2019re interested in what we\u2019re building \u2014 whether as a potential user, partner, or investor \u2014 reach out at <a href="mailto:contact@exomudra.com">contact@exomudra.com</a>.</p>
+            `,
+                },
+                {
+                    slug: "force-feedback-explained",
+                    title: "How Active Force Feedback Works in Exomudra Shakti",
+                    date: "2025-02-20",
+                    tag: "Technology",
+                    excerpt:
+                        "A technical deep dive into the motor-driven resistance system that lets you feel virtual objects with your fingers.",
+                    image: "",
+                    content: `
+                <p>One of the defining features of the Exomudra Shakti is its active force-feedback system. Unlike passive haptics (vibration motors), our system uses miniature servo motors to physically resist finger movement, creating the sensation of touching and gripping real objects in virtual space.</p>
+                <h2>Why Force Feedback Matters</h2>
+                <p>When you reach out to grab a virtual cup in VR, your fingers pass right through it. Vibration-based haptics can signal \u201cyou touched something,\u201d but they can\u2019t stop your fingers from closing. Force feedback can.</p>
+                <p>By introducing controlled resistance at each finger joint via a rack-and-pinion mechanism connected to smart servos, we create the illusion of solidity. Your brain interprets the mechanical resistance as a physical object, dramatically increasing presence and immersion.</p>
+                <h2>The Mechanism</h2>
+                <p>Each finger on the Shakti glove is equipped with a tendon-driven mechanism connected to a micro servo motor. When the software detects contact with a virtual surface, it commands the motor to apply calibrated resistance. We use magnetic encoders (AS5600) for 0.087\u00b0 angular resolution and sub-millisecond position feedback.</p>
+                <ul>
+                    <li><strong>Gripping:</strong> Motors resist finger closure proportional to virtual object hardness</li>
+                    <li><strong>Surface contact:</strong> Brief resistance pulse simulates tapping a surface</li>
+                    <li><strong>Rehabilitation:</strong> Programmable resistance profiles for progressive finger strengthening</li>
+                </ul>
+                <h3>Dual Use: Rehabilitation</h3>
+                <p>The same force-feedback system that enables VR immersion doubles as a rehabilitation tool. Patients recovering from hand injuries or strokes can use the Shakti glove with prescribed resistance programs to strengthen their fingers progressively. The software tracks range of motion and force metrics over time, giving therapists objective data on recovery progress.</p>
+                <h2>The Engineering Challenge</h2>
+                <p>Building force feedback into a wearable glove is hard. The motors need to be small enough to wear comfortably, powerful enough to create convincing resistance, quiet enough not to break immersion, and energy-efficient enough to run on a battery. We evaluated over 12 different resistance mechanism technologies \u2014 from magnetorheological brakes to electroadhesive clutches \u2014 before arriving at our current approach that balances performance, weight, and cost for the Indian market.</p>
+                <p>In future posts, we\u2019ll go deeper into the sensor fusion algorithms that determine when and how much force to apply. Stay tuned.</p>
+            `,
+                },
+                {
+                    slug: "configurator-universal-input",
+                    title: "The Exomudra Configurator: One Glove, Any Device",
+                    date: "2025-03-10",
+                    tag: "Product",
+                    excerpt:
+                        "How our free firmware configurator lets you map the Exomudra glove to replace any hardware input device.",
+                    image: "",
+                    content: `
+                <p>Every Exomudra glove \u2014 whether Sanjna or Shakti \u2014 ships with the Exomudra Configurator, a desktop application that lets you remap the glove\u2019s gesture outputs to any hardware input protocol.</p>
+                <h2>What Does That Mean?</h2>
+                <p>Out of the box, Exomudra gloves work as gesture controllers for VR, gaming, and sign language translation. But what if you want to use them as a MIDI controller for music production? Or as a mouse replacement for someone with limited mobility? Or as a presentation remote?</p>
+                <p>The Configurator makes this possible. It patches the glove\u2019s firmware to output whatever HID (Human Interface Device) protocol you need.</p>
+                <h2>How It Works</h2>
+                <ul>
+                    <li><strong>Connect:</strong> Plug in your Exomudra glove via USB</li>
+                    <li><strong>Map:</strong> Use the visual editor to assign finger gestures and hand positions to keyboard shortcuts, mouse actions, MIDI signals, or gamepad inputs</li>
+                    <li><strong>Flash:</strong> One click to patch the firmware with your custom profile</li>
+                    <li><strong>Use:</strong> Disconnect USB, and the glove now operates wirelessly with your custom mapping</li>
+                </ul>
+                <h2>Community Profiles</h2>
+                <p>We\u2019re building a profile library where users can share and download pre-made configurations for popular applications \u2014 Blender, DaVinci Resolve, Ableton Live, Unity, and more. Found a great mapping? Share it. Need one for a niche tool? Chances are someone\u2019s already built it.</p>
+                <h2>Why It\u2019s Free</h2>
+                <p>We believe the hardware you buy should be truly yours. The Configurator isn\u2019t a premium add-on \u2014 it\u2019s a fundamental part of the product. No subscriptions, no paywalls, no artificial limitations. You bought the glove. You own the glove. Do whatever you want with it.</p>
+                <p>The Configurator is currently in beta. If you\u2019d like early access, reach out at <a href="mailto:contact@exomudra.com">contact@exomudra.com</a>.</p>
+            `,
+                },
+            ];
+
+            // ══════════════════════════════════════
+            //  RENDERING
+            // ══════════════════════════════════════
+            function fmtDate(d) {
+                return new Date(d + "T00:00:00").toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                });
             }
-        });
 
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Apply observer to elements
-        document.addEventListener('DOMContentLoaded', () => {
-            const elements = document.querySelectorAll('.feature-card, .problem-card, .stat-card, .product-card');
-            elements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+            function renderBlog() {
+                var g = document.getElementById("blogGrid");
+                g.innerHTML = BLOG_POSTS.map(function (p) {
+                    return (
+                        '<a class="blog-card fi" href="#" onclick="openPost(\'' +
+                        p.slug +
+                        "');return false\">" +
+                        '<div class="blog-card-img">' +
+                        (p.image
+                            ? '<img src="' +
+                              p.image +
+                              '" alt="' +
+                              p.title +
+                              '">'
+                            : '<svg class="ph" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>') +
+                        "</div>" +
+                        '<div class="blog-card-body">' +
+                        '<div class="blog-card-date">' +
+                        fmtDate(p.date) +
+                        "</div>" +
+                        "<h3>" +
+                        p.title +
+                        "</h3>" +
+                        "<p>" +
+                        p.excerpt +
+                        "</p>" +
+                        "</div>" +
+                        '<div class="blog-card-foot">' +
+                        '<span class="blog-rm">Read more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>' +
+                        '<span class="blog-tag">' +
+                        p.tag +
+                        "</span>" +
+                        "</div>" +
+                        "</a>"
+                    );
+                }).join("");
+                document
+                    .querySelectorAll("#blogGrid .fi")
+                    .forEach(function (el) {
+                        obs.observe(el);
                     });
+            }
+
+            function openPost(slug) {
+                var p = BLOG_POSTS.find(function (x) {
+                    return x.slug === slug;
+                });
+                if (!p) return;
+                document.getElementById("main").classList.add("hidden");
+                document.getElementById("blogPost").classList.add("active");
+                document.getElementById("bpTitle").textContent = p.title;
+                document.getElementById("bpMeta").textContent =
+                    fmtDate(p.date) + "  \u00b7  " + p.tag;
+                document.getElementById("bpBody").innerHTML = p.content;
+                window.scrollTo({ top: 0, behavior: "instant" });
+                history.pushState({ blog: slug }, "", "#blog/" + slug);
+            }
+
+            function toMain() {
+                document.getElementById("main").classList.remove("hidden");
+                document.getElementById("blogPost").classList.remove("active");
+            }
+
+            window.addEventListener("popstate", function (e) {
+                if (e.state && e.state.blog) {
+                    openPost(e.state.blog);
+                } else {
+                    toMain();
                 }
             });
-        });
-    </script>
-</body>
+
+            // ══════════════════════════════════════
+            //  SLIDESHOW
+            // ══════════════════════════════════════
+            var cur = 0;
+            var slides = document.querySelectorAll(".slide");
+            var dots = document.querySelectorAll(".dot");
+
+            function goSlide(i) {
+                slides[cur].classList.remove("active");
+                dots[cur].classList.remove("active");
+                cur = i;
+                slides[cur].classList.add("active");
+                dots[cur].classList.add("active");
+            }
+
+            dots.forEach(function (b) {
+                b.addEventListener("click", function () {
+                    goSlide(parseInt(b.dataset.s));
+                });
+            });
+
+            var si = setInterval(function () {
+                goSlide((cur + 1) % slides.length);
+            }, 5000);
+            document
+                .querySelector(".hero")
+                .addEventListener("mouseenter", function () {
+                    clearInterval(si);
+                });
+            document
+                .querySelector(".hero")
+                .addEventListener("mouseleave", function () {
+                    si = setInterval(function () {
+                        goSlide((cur + 1) % slides.length);
+                    }, 5000);
+                });
+
+            // ══════════════════════════════════════
+            //  HEADER & MOBILE MENU
+            // ══════════════════════════════════════
+            var hdr = document.querySelector("header");
+            window.addEventListener("scroll", function () {
+                hdr.classList.toggle("scrolled", window.scrollY > 40);
+            });
+
+            var ham = document.querySelector(".hamburger");
+            var nl = document.querySelector(".nav-links");
+            ham.addEventListener("click", function () {
+                ham.classList.toggle("open");
+                nl.classList.toggle("open");
+            });
+            nl.querySelectorAll("a").forEach(function (a) {
+                a.addEventListener("click", function () {
+                    ham.classList.remove("open");
+                    nl.classList.remove("open");
+                });
+            });
+
+            // ══════════════════════════════════════
+            //  SCROLL ANIMATIONS
+            // ══════════════════════════════════════
+            var obs = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) e.target.classList.add("vis");
+                    });
+                },
+                { threshold: 0.1, rootMargin: "0px 0px -30px 0px" },
+            );
+
+            document.querySelectorAll(".fi").forEach(function (el) {
+                obs.observe(el);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+                a.addEventListener("click", function (e) {
+                    var href = this.getAttribute("href");
+                    if (href === "#" || href.indexOf("#blog/") === 0) return;
+                    var t = document.querySelector(href);
+                    if (t) {
+                        e.preventDefault();
+                        toMain();
+                        setTimeout(function () {
+                            t.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start",
+                            });
+                        }, 10);
+                    }
+                });
+            });
+
+            // ══════════════════════════════════════
+            //  INIT
+            // ══════════════════════════════════════
+            renderBlog();
+            (function () {
+                var h = window.location.hash;
+                if (h.indexOf("#blog/") === 0)
+                    openPost(h.replace("#blog/", ""));
+            })();
+        </script>
+    </body>
 </html>
