@@ -9,11 +9,11 @@
         </title>
         <meta
             name="description"
-            content="Wireless smart gloves enabling natural hand gesture interaction for VR/AR, gaming, sign language translation, and assistive technology. 2-5x lower cost than competitors."
+            content="Wireless smart gloves enabling natural hand gesture interaction for healthcare rehabilitation, sign language translation, and beyond. Technology that structures around the human body."
         />
         <meta
             name="keywords"
-            content="smart gloves, VR controller, hand tracking, gesture control, haptic feedback, sign language translation, force feedback gloves, assistive technology, exoskeleton gloves, Chennai deep tech"
+            content="smart gloves, hand tracking, gesture control, haptic feedback, sign language translation, force feedback gloves, assistive technology, rehabilitation, patient monitoring, Chennai deep tech"
         />
         <meta name="author" content="Exomudra Technologies Private Limited" />
         <meta name="robots" content="index, follow" />
@@ -31,7 +31,7 @@
         />
         <meta
             property="og:description"
-            content="Wireless smart gloves with gesture tracking and haptic feedback. Replace rigid controllers with the most natural interface — your own hands."
+            content="Wireless smart gloves that pair any human hand gesture to digital signals. Starting with healthcare rehabilitation and sign language accessibility."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://exomudra.com/" />
@@ -48,7 +48,7 @@
         />
         <meta
             name="twitter:description"
-            content="Wireless smart gloves with gesture tracking and haptic feedback. Replace rigid controllers with the most natural interface — your own hands."
+            content="Wireless smart gloves that pair any human hand gesture to digital signals. Starting with healthcare rehabilitation and sign language accessibility."
         />
         <meta name="twitter:image" content="https://exomudra.com/logo.png" />
 
@@ -83,7 +83,7 @@
                             "width": 512,
                             "height": 512
                         },
-                        "description": "Deep tech startup building wireless smart gloves for natural hand gesture interaction in VR/AR, gaming, and assistive technology.",
+                        "description": "Deep tech startup building wireless smart gloves for natural hand gesture interaction — healthcare rehabilitation, sign language translation, and universal human-machine control.",
                         "foundingDate": "2021",
                         "founders": [
                             { "@type": "Person", "name": "Ragav Yarasi" }
@@ -101,7 +101,11 @@
                                 "contactType": "customer service"
                             }
                         ],
-                        "sameAs": ["https://www.linkedin.com/company/exomudra/"]
+                        "sameAs": [
+                            "https://www.linkedin.com/company/exomudra/",
+                            "https://www.youtube.com/@Exomudra",
+                            "https://medium.com/exomudra"
+                        ]
                     },
                     {
                         "@type": "WebSite",
@@ -138,16 +142,16 @@
                 --bg-3: #14141c;
                 --bg-card: #16161f;
                 --bg-card-h: #1c1c28;
-                --accent: #00e5ff;
-                --accent-2: #7c4dff;
-                --accent-dim: rgba(0, 229, 255, 0.1);
-                --accent-glow: rgba(0, 229, 255, 0.25);
-                --accent2-dim: rgba(124, 77, 255, 0.1);
+                --accent: #ca2e55;
+                --accent-2: #e8607a;
+                --accent-dim: rgba(202, 46, 85, 0.1);
+                --accent-glow: rgba(202, 46, 85, 0.3);
+                --accent2-dim: rgba(232, 96, 122, 0.1);
                 --text: #eaeaf0;
-                --text-2: #85859a;
+                --text-2: #8a8a9e;
                 --text-3: #50506a;
                 --border: rgba(255, 255, 255, 0.05);
-                --border-h: rgba(0, 229, 255, 0.18);
+                --border-h: rgba(202, 46, 85, 0.2);
             }
 
             html {
@@ -169,9 +173,8 @@
 
             ::selection {
                 background: var(--accent);
-                color: var(--bg);
+                color: #fff;
             }
-
             .container {
                 max-width: 1140px;
                 margin: 0 auto;
@@ -193,14 +196,12 @@
             header.scrolled {
                 background: rgba(8, 8, 12, 0.95);
             }
-
             nav {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 height: 64px;
             }
-
             .logo {
                 display: flex;
                 align-items: center;
@@ -238,10 +239,9 @@
             .nav-links a.active {
                 color: var(--accent);
             }
-
             .nav-cta {
                 background: var(--accent) !important;
-                color: var(--bg) !important;
+                color: #fff !important;
                 padding: 7px 18px;
                 border-radius: 4px;
                 font-weight: 600 !important;
@@ -266,7 +266,7 @@
                 transition: all 0.3s;
             }
 
-            /* ═══ HERO / SLIDESHOW ═══ */
+            /* ═══ HERO ═══ */
             .hero {
                 position: relative;
                 min-height: 100vh;
@@ -274,7 +274,6 @@
                 align-items: center;
                 overflow: hidden;
             }
-
             .slideshow {
                 position: absolute;
                 inset: 0;
@@ -296,19 +295,17 @@
                 inset: 0;
                 background: linear-gradient(
                     160deg,
-                    rgba(8, 8, 12, 0.82) 0%,
-                    rgba(8, 8, 12, 0.45) 45%,
-                    rgba(8, 8, 12, 0.7) 75%,
+                    rgba(8, 8, 12, 0.85) 0%,
+                    rgba(8, 8, 12, 0.5) 45%,
+                    rgba(8, 8, 12, 0.72) 75%,
                     rgba(8, 8, 12, 0.97) 100%
                 );
             }
-
             .hero-inner {
                 position: relative;
                 z-index: 1;
                 max-width: 660px;
             }
-
             .hero-tag {
                 display: inline-block;
                 font-family: "JetBrains Mono", monospace;
@@ -322,7 +319,6 @@
                 background: var(--accent-dim);
                 border-radius: 2px;
             }
-
             .hero h1 {
                 font-size: clamp(2.4rem, 5vw, 3.8rem);
                 font-weight: 800;
@@ -340,7 +336,6 @@
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
             }
-
             .hero p {
                 font-size: 1.1rem;
                 color: var(--text-2);
@@ -348,7 +343,6 @@
                 margin-bottom: 2.5rem;
                 max-width: 520px;
             }
-
             .hero-btns {
                 display: flex;
                 gap: 1rem;
@@ -371,7 +365,7 @@
             }
             .btn-p {
                 background: var(--accent);
-                color: var(--bg);
+                color: #fff;
             }
             .btn-p:hover {
                 box-shadow: 0 0 32px var(--accent-glow);
@@ -449,49 +443,33 @@
                 background: var(--bg-2);
             }
 
+            .thesis {
+                max-width: 820px;
+                margin: 0 auto 4.5rem;
+            }
+            .thesis p {
+                font-size: 1.12rem;
+                color: var(--text-2);
+                line-height: 1.9;
+                margin-bottom: 1.5rem;
+            }
+            .thesis p:first-of-type {
+                font-size: 1.3rem;
+                color: var(--text);
+                font-weight: 400;
+                line-height: 1.7;
+            }
+            .thesis .highlight {
+                color: var(--accent);
+                font-weight: 600;
+            }
+
             .about-grid {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                gap: 4rem;
+                gap: 2rem;
             }
 
-            .about-text p {
-                color: var(--text-2);
-                margin-bottom: 1.25rem;
-                line-height: 1.8;
-                font-size: 0.95rem;
-            }
-
-            .about-nums {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-                margin-top: 2rem;
-            }
-            .about-num {
-                padding: 1.25rem;
-                background: var(--bg-card);
-                border: 1px solid var(--border);
-                border-radius: 6px;
-            }
-            .about-num h4 {
-                font-family: "JetBrains Mono", monospace;
-                font-size: 1.6rem;
-                color: var(--accent);
-                font-weight: 700;
-            }
-            .about-num span {
-                font-size: 0.75rem;
-                color: var(--text-3);
-                text-transform: uppercase;
-                letter-spacing: 1px;
-            }
-
-            .about-cards {
-                display: flex;
-                flex-direction: column;
-                gap: 1.25rem;
-            }
             .about-card {
                 display: flex;
                 gap: 1rem;
@@ -517,21 +495,46 @@
                 color: var(--accent);
             }
             .about-card h4 {
-                font-size: 0.95rem;
+                font-size: 0.92rem;
                 font-weight: 600;
-                margin-bottom: 0.25rem;
+                margin-bottom: 0.2rem;
             }
             .about-card p {
-                font-size: 0.85rem;
+                font-size: 0.84rem;
                 color: var(--text-2);
                 line-height: 1.6;
+            }
+
+            .about-nums {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem;
+                margin-top: 3rem;
+            }
+            .about-num {
+                padding: 1.25rem;
+                background: var(--bg-card);
+                border: 1px solid var(--border);
+                border-radius: 6px;
+                text-align: center;
+            }
+            .about-num h4 {
+                font-family: "JetBrains Mono", monospace;
+                font-size: 1.5rem;
+                color: var(--accent);
+                font-weight: 700;
+            }
+            .about-num span {
+                font-size: 0.7rem;
+                color: var(--text-3);
+                text-transform: uppercase;
+                letter-spacing: 1px;
             }
 
             /* ═══ STORE ═══ */
             #store {
                 background: var(--bg);
             }
-
             .store-grid {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -589,12 +592,12 @@
                 margin-bottom: 1.25rem;
             }
             .badge-l {
-                color: var(--accent);
-                background: var(--accent-dim);
-            }
-            .badge-p {
                 color: var(--accent-2);
                 background: var(--accent2-dim);
+            }
+            .badge-p {
+                color: var(--accent);
+                background: var(--accent-dim);
             }
 
             .prod h3 {
@@ -606,7 +609,6 @@
                 font-size: 0.82rem;
                 color: var(--text-3);
                 margin-bottom: 1.1rem;
-                font-style: italic;
             }
             .prod-price {
                 font-family: "JetBrains Mono", monospace;
@@ -620,7 +622,6 @@
                 color: var(--text-3);
                 margin-bottom: 1.75rem;
             }
-
             .prod-feats {
                 list-style: none;
                 margin-bottom: 1.75rem;
@@ -643,7 +644,6 @@
                 font-weight: 600;
                 flex-shrink: 0;
             }
-
             .prod .btn {
                 width: 100%;
                 justify-content: center;
@@ -682,214 +682,12 @@
                 line-height: 1.6;
             }
 
-            /* ═══ BLOG ═══ */
-            #blog {
-                background: var(--bg-2);
-            }
-
-            .blog-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1.75rem;
-            }
-
-            .blog-card {
-                background: var(--bg-card);
-                border: 1px solid var(--border);
-                border-radius: 8px;
-                overflow: hidden;
-                transition: all 0.3s;
-                text-decoration: none;
-                color: inherit;
-                display: block;
-            }
-            .blog-card:hover {
-                border-color: var(--border-h);
-                transform: translateY(-3px);
-                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-            }
-
-            .blog-card-img {
-                width: 100%;
-                height: 180px;
-                background: var(--bg-3);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-            }
-            .blog-card-img img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            .blog-card-img .ph {
-                color: var(--text-3);
-            }
-
-            .blog-card-body {
-                padding: 1.25rem;
-            }
-            .blog-card-date {
-                font-family: "JetBrains Mono", monospace;
-                font-size: 0.65rem;
-                color: var(--text-3);
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-bottom: 0.6rem;
-            }
-            .blog-card-body h3 {
-                font-size: 1.02rem;
-                font-weight: 600;
-                margin-bottom: 0.6rem;
-                line-height: 1.4;
-            }
-            .blog-card-body p {
-                font-size: 0.85rem;
-                color: var(--text-2);
-                line-height: 1.6;
-            }
-
-            .blog-card-foot {
-                padding: 0.8rem 1.25rem;
-                border-top: 1px solid var(--border);
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .blog-rm {
-                font-size: 0.78rem;
-                color: var(--accent);
-                font-weight: 500;
-                display: flex;
-                align-items: center;
-                gap: 4px;
-            }
-            .blog-tag {
-                font-family: "JetBrains Mono", monospace;
-                font-size: 0.62rem;
-                color: var(--text-3);
-                padding: 2px 7px;
-                background: var(--bg-3);
-                border-radius: 3px;
-            }
-
-            /* ═══ BLOG POST ═══ */
-            .blog-post {
-                display: none;
-                padding-top: 96px;
-                min-height: 100vh;
-            }
-            .blog-post.active {
-                display: block;
-            }
-
-            .blog-post-head {
-                max-width: 760px;
-                margin: 0 auto 2.5rem;
-                padding: 0 24px;
-            }
-            .blog-post-back {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                color: var(--accent);
-                text-decoration: none;
-                font-size: 0.82rem;
-                font-weight: 500;
-                margin-bottom: 2rem;
-                transition: gap 0.3s;
-            }
-            .blog-post-back:hover {
-                gap: 12px;
-            }
-            .blog-post-head h1 {
-                font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-                font-weight: 700;
-                letter-spacing: -0.8px;
-                margin-bottom: 0.75rem;
-                line-height: 1.2;
-            }
-            .blog-post-head .meta {
-                font-family: "JetBrains Mono", monospace;
-                font-size: 0.72rem;
-                color: var(--text-3);
-                text-transform: uppercase;
-                letter-spacing: 1px;
-            }
-
-            .blog-post-body {
-                max-width: 760px;
-                margin: 0 auto;
-                padding: 0 24px 5rem;
-            }
-            .blog-post-body p {
-                color: var(--text-2);
-                line-height: 1.9;
-                margin-bottom: 1.4rem;
-                font-size: 1.02rem;
-            }
-            .blog-post-body h2 {
-                font-size: 1.5rem;
-                font-weight: 700;
-                margin: 2.5rem 0 0.8rem;
-                color: var(--text);
-            }
-            .blog-post-body h3 {
-                font-size: 1.15rem;
-                font-weight: 600;
-                margin: 1.75rem 0 0.6rem;
-                color: var(--text);
-            }
-            .blog-post-body ul,
-            .blog-post-body ol {
-                color: var(--text-2);
-                margin-bottom: 1.4rem;
-                padding-left: 1.5rem;
-                line-height: 1.9;
-            }
-            .blog-post-body blockquote {
-                border-left: 3px solid var(--accent);
-                padding-left: 1.25rem;
-                margin: 1.75rem 0;
-                color: var(--text-2);
-                font-style: italic;
-            }
-            .blog-post-body code {
-                font-family: "JetBrains Mono", monospace;
-                background: var(--bg-card);
-                padding: 2px 5px;
-                border-radius: 3px;
-                font-size: 0.88em;
-            }
-            .blog-post-body pre {
-                background: var(--bg-card);
-                padding: 1.25rem;
-                border-radius: 6px;
-                overflow-x: auto;
-                margin-bottom: 1.4rem;
-                border: 1px solid var(--border);
-            }
-            .blog-post-body pre code {
-                background: none;
-                padding: 0;
-            }
-            .blog-post-body a {
-                color: var(--accent);
-            }
-
-            /* ═══ CONTACT ═══ */
-            #contact {
-                background: var(--bg);
-            }
-
             /* ═══ FOOTER ═══ */
             footer {
                 background: var(--bg);
                 border-top: 1px solid var(--border);
                 padding: 3.5rem 0 1.5rem;
             }
-
             .foot-grid {
                 display: grid;
                 grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -924,7 +722,6 @@
                 color: var(--accent);
                 background: var(--accent-dim);
             }
-
             .foot-col h4 {
                 font-size: 0.72rem;
                 text-transform: uppercase;
@@ -943,7 +740,6 @@
             .foot-col a:hover {
                 color: var(--accent);
             }
-
             .foot-bottom {
                 display: flex;
                 justify-content: space-between;
@@ -990,19 +786,13 @@
                 transition-delay: 0.24s;
             }
 
-            /* SPA visibility */
-            .main {
-                display: block;
-            }
-            .main.hidden {
-                display: none;
-            }
-
             /* ═══ RESPONSIVE ═══ */
             @media (max-width: 1024px) {
                 .about-grid {
                     grid-template-columns: 1fr;
-                    gap: 2.5rem;
+                }
+                .about-nums {
+                    grid-template-columns: 1fr 1fr;
                 }
                 .store-grid {
                     grid-template-columns: 1fr;
@@ -1011,7 +801,6 @@
                     margin-right: auto;
                 }
             }
-
             @media (max-width: 768px) {
                 .nav-links {
                     display: none;
@@ -1043,15 +832,8 @@
                 .hamburger.open span:nth-child(3) {
                     transform: rotate(-45deg) translate(5px, -5px);
                 }
-
                 .sec {
                     padding: 72px 0;
-                }
-                .blog-grid {
-                    grid-template-columns: 1fr;
-                    max-width: 480px;
-                    margin-left: auto;
-                    margin-right: auto;
                 }
                 .foot-grid {
                     grid-template-columns: 1fr 1fr;
@@ -1071,8 +853,10 @@
                 .about-nums {
                     grid-template-columns: 1fr 1fr;
                 }
+                .about-grid {
+                    gap: 1rem;
+                }
             }
-
             @media (max-width: 480px) {
                 .hero-btns {
                     flex-direction: column;
@@ -1090,7 +874,7 @@
     <body>
         <header>
             <nav class="container">
-                <a href="#home" class="logo" onclick="toMain()">
+                <a href="#home" class="logo">
                     <img src="logo.png" alt="Exomudra Logo" />
                     <span>Exomudra</span>
                 </a>
@@ -1098,488 +882,466 @@
                     <span></span><span></span><span></span>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="#home" onclick="toMain()">Home</a></li>
-                    <li><a href="#about" onclick="toMain()">About</a></li>
-                    <li><a href="#store" onclick="toMain()">Store</a></li>
-                    <li><a href="#blog" onclick="toMain()">Blog</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#store">Store</a></li>
                     <li>
                         <a
-                            href="https://www.youtube.com/@exomudra"
+                            href="https://medium.com/exomudra"
+                            target="_blank"
+                            rel="noopener"
+                            >Blog</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.youtube.com/@Exomudra"
                             target="_blank"
                             rel="noopener"
                             >YouTube</a
                         >
                     </li>
-                    <li>
-                        <a href="#contact" onclick="toMain()" class="nav-cta"
-                            >Contact</a
-                        >
-                    </li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
-        <!-- ═══════════ MAIN ═══════════ -->
-        <div class="main" id="main">
-            <!-- HERO -->
-            <section class="hero" id="home">
-                <div class="slideshow">
-                    <!-- Replace these placeholder URLs with actual product photos -->
-                    <div
-                        class="slide active"
-                        style="
-                            background-image: url(&quot;https://placehold.co/1920x1080/0a0a14/14141c?text=Exomudra+Glove+%E2%80%93+Front+View&quot;);
-                            background-color: var(--bg);
-                        "
-                    ></div>
-                    <div
-                        class="slide"
-                        style="
-                            background-image: url(&quot;https://placehold.co/1920x1080/0c0c16/16161f?text=Exomudra+Glove+%E2%80%93+Side+View&quot;);
-                            background-color: var(--bg-2);
-                        "
-                    ></div>
-                    <div
-                        class="slide"
-                        style="
-                            background-image: url(&quot;https://placehold.co/1920x1080/0e0e18/18181f?text=Exomudra+Glove+%E2%80%93+In+Action&quot;);
-                            background-color: var(--bg-3);
-                        "
-                    ></div>
-                </div>
-                <div class="container">
-                    <div class="hero-inner">
-                        <div class="hero-tag">
-                            Next-Gen Human Machine Interface
-                        </div>
-                        <h1>
-                            Your hands are the
-                            <span class="grad">controller.</span>
-                        </h1>
-                        <p>
-                            Wireless smart gloves with precision gesture
-                            tracking and active haptic feedback. Replace rigid
-                            controllers with the most natural
-                            interface&nbsp;&mdash;&nbsp;your own hands.
-                        </p>
-                        <div class="hero-btns">
-                            <a href="#store" class="btn btn-p"
-                                >Explore Products</a
-                            >
-                            <a href="#about" class="btn btn-o">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="dots">
-                    <button class="dot active" data-s="0"></button>
-                    <button class="dot" data-s="1"></button>
-                    <button class="dot" data-s="2"></button>
-                </div>
-            </section>
-
-            <!-- ABOUT -->
-            <section class="sec" id="about">
-                <div class="container">
-                    <div class="about-grid">
-                        <div class="about-text">
-                            <span class="sec-label">// About Exomudra</span>
-                            <h2>Technology that adapts to&nbsp;humans.</h2>
-                            <p>
-                                Exomudra Technologies is a deep tech startup
-                                based in Chennai, India, building wireless smart
-                                gloves that enable natural hand gesture
-                                interaction with computers.
-                            </p>
-                            <p>
-                                We believe the future of human-computer
-                                interaction isn't about better
-                                buttons&nbsp;&mdash;&nbsp;it's about removing
-                                them entirely. Our gloves capture precise finger
-                                movements using IMU and flex sensor fusion,
-                                translating them into digital commands for
-                                VR/AR, gaming, creative work, and assistive
-                                technology.
-                            </p>
-                            <p>
-                                Founded in 2021 by Ragav Yarasi and incubated at
-                                iTNT Hub, we're on a mission to make
-                                gesture-based computing accessible and
-                                affordable&nbsp;&mdash;&nbsp;at 2&#8211;5x lower
-                                cost than competitors.
-                            </p>
-                            <div class="about-nums">
-                                <div class="about-num">
-                                    <h4>2021</h4>
-                                    <span>Founded</span>
-                                </div>
-                                <div class="about-num">
-                                    <h4>2-5x</h4>
-                                    <span>Lower cost</span>
-                                </div>
-                                <div class="about-num">
-                                    <h4>$49.5B</h4>
-                                    <span>VR/AR market (2025)</span>
-                                </div>
-                                <div class="about-num">
-                                    <h4>70M+</h4>
-                                    <span>Sign language users</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about-cards">
-                            <div class="about-card fi">
-                                <div class="about-card-icon">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path d="M6 3h12l4 6-10 13L2 9z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4>Precision Gesture Tracking</h4>
-                                    <p>
-                                        IMU + flex sensor fusion with
-                                        proprietary algorithms for
-                                        sub-centimeter finger tracking accuracy
-                                        and ultra-low latency.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="about-card fi">
-                                <div class="about-card-icon">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <circle cx="12" cy="12" r="3" />
-                                        <path
-                                            d="M12 1v6m0 6v6m11-7h-6m-6 0H1"
-                                        />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4>Active Force Feedback</h4>
-                                    <p>
-                                        Motor-driven resistance on each finger
-                                        lets you feel virtual surfaces and
-                                        objects, doubling as a rehabilitation
-                                        tool for finger strengthening.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="about-card fi">
-                                <div class="about-card-icon">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <rect
-                                            x="2"
-                                            y="3"
-                                            width="20"
-                                            height="14"
-                                            rx="2"
-                                            ry="2"
-                                        />
-                                        <line x1="8" y1="21" x2="16" y2="21" />
-                                        <line x1="12" y1="17" x2="12" y2="21" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4>Cross-Platform</h4>
-                                    <p>
-                                        Works with Windows, macOS, Linux. Full
-                                        integration with Unity, Unreal Engine,
-                                        SteamVR, and mobile devices.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="about-card fi">
-                                <div class="about-card-icon">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path
-                                            d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
-                                        />
-                                        <circle cx="9" cy="7" r="4" />
-                                        <path
-                                            d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
-                                        />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4>Sign Language Accessibility</h4>
-                                    <p>
-                                        Real-time sign language translation to
-                                        bridge communication gaps for 70M+ sign
-                                        language users worldwide.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="about-card fi">
-                                <div class="about-card-icon">
-                                    <svg
-                                        width="20"
-                                        height="20"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                        <path d="M2 17l10 5 10-5" />
-                                        <path d="M2 12l10 5 10-5" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4>Fully Mobile</h4>
-                                    <p>
-                                        Self-contained wireless glove with no
-                                        external trackers or cameras needed.
-                                        Just put it on and go.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- STORE -->
-            <section class="sec" id="store">
-                <div class="container">
-                    <div class="sec-center">
-                        <span class="sec-label">// Store</span>
-                        <h2>Choose your Exomudra.</h2>
-                        <p class="sec-desc">
-                            Two tiers designed for different needs. Both ship
-                            with the Exomudra Configurator&nbsp;&mdash;&nbsp;a
-                            free tool that patches firmware so you can use the
-                            glove as any input device.
-                        </p>
-                    </div>
-                    <div class="store-grid stagger">
-                        <!-- Sanjna (Lite) -->
-                        <div class="prod fi">
-                            <span class="prod-badge badge-l">Lite</span>
-                            <h3>Exomudra Sanjna</h3>
-                            <p class="prod-sub">
-                                &#x0938;&#x091E;&#x094D;&#x091C;&#x094D;&#x091E;&#x093E;
-                                &mdash; "gesture / sign"
-                            </p>
-                            <div class="prod-price">&#8377; 25,000</div>
-                            <p class="prod-pn">
-                                Includes 1 year software subscription
-                            </p>
-                            <ul class="prod-feats">
-                                <li>
-                                    Precision gesture tracking with IMU + flex
-                                    sensors
-                                </li>
-                                <li>
-                                    Designed for sign language translation &amp;
-                                    accessibility
-                                </li>
-                                <li>Wireless low-latency connectivity</li>
-                                <li>Cross-platform (Windows, macOS, Linux)</li>
-                                <li>Lightweight ergonomic build</li>
-                                <li>
-                                    Free Configurator for universal device
-                                    mapping
-                                </li>
-                            </ul>
-                            <a href="#contact" class="btn btn-o"
-                                >Pre-order Now</a
-                            >
-                        </div>
-
-                        <!-- Shakti (Pro) -->
-                        <div class="prod feat fi">
-                            <span class="prod-badge badge-p">Pro</span>
-                            <h3>Exomudra Shakti</h3>
-                            <p class="prod-sub">
-                                &#x0936;&#x0915;&#x094D;&#x0924;&#x093F; &mdash;
-                                "power / force"
-                            </p>
-                            <div
-                                class="prod-price"
-                                style="color: var(--accent-2)"
-                            >
-                                &#8377; 50,000
-                            </div>
-                            <p class="prod-pn">
-                                Includes 1 year software subscription
-                            </p>
-                            <ul class="prod-feats">
-                                <li>Everything in Sanjna, plus:</li>
-                                <li>
-                                    Active force-feedback motors for finger
-                                    resistance
-                                </li>
-                                <li>
-                                    Haptic feedback on touching virtual surfaces
-                                </li>
-                                <li>
-                                    Finger strengthening for rehabilitation
-                                    patients
-                                </li>
-                                <li>
-                                    Immersive VR/AR control with tactile
-                                    response
-                                </li>
-                                <li>
-                                    Free Configurator for universal device
-                                    mapping
-                                </li>
-                            </ul>
-                            <a href="#contact" class="btn btn-p"
-                                >Pre-order Now</a
-                            >
-                        </div>
-                    </div>
-
-                    <div class="store-extras">
-                        <div class="store-extras-grid stagger">
-                            <div class="store-extra fi">
-                                <h4>
-                                    <svg
-                                        width="15"
-                                        height="15"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <path
-                                            d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-                                        />
-                                    </svg>
-                                    Software Subscription
-                                </h4>
-                                <p>
-                                    First year free with hardware. Annual
-                                    subscription for continued software updates,
-                                    cloud features, and gesture library access.
-                                </p>
-                            </div>
-                            <div class="store-extra fi">
-                                <h4>
-                                    <svg
-                                        width="15"
-                                        height="15"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline points="16 18 22 12 16 6" />
-                                        <polyline points="8 6 2 12 8 18" />
-                                    </svg>
-                                    Free Configurator
-                                </h4>
-                                <p>
-                                    Every unit ships with the Exomudra
-                                    Configurator&nbsp;&mdash;&nbsp;patch the
-                                    firmware to map the glove as any hardware
-                                    input device for any use case.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- BLOG -->
-            <section class="sec" id="blog">
-                <div class="container">
-                    <div class="sec-center">
-                        <span class="sec-label">// Blog</span>
-                        <h2>From the workshop.</h2>
-                        <p class="sec-desc">
-                            Updates on our progress, deep dives into the tech,
-                            and thoughts on the future of human-computer
-                            interaction.
-                        </p>
-                    </div>
-                    <div class="blog-grid stagger" id="blogGrid"></div>
-                </div>
-            </section>
-
-            <!-- CONTACT -->
-            <section class="sec" id="contact" style="padding: 72px 0">
-                <div class="container sec-center">
-                    <span class="sec-label">// Get in Touch</span>
-                    <h2>Let's build the future together.</h2>
-                    <p class="sec-desc">
-                        Interested in Exomudra? Have questions about our
-                        products, want to partner, or just want to say hello?
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="slideshow">
+                <!-- Replace placeholder URLs with actual product photos -->
+                <div
+                    class="slide active"
+                    style="
+                        background-image: url(&quot;https://placehold.co/1920x1080/0a0a14/14141c?text=Exomudra+Glove+%E2%80%93+Front+View&quot;);
+                        background-color: var(--bg);
+                    "
+                ></div>
+                <div
+                    class="slide"
+                    style="
+                        background-image: url(&quot;https://placehold.co/1920x1080/0c0c16/16161f?text=Exomudra+Glove+%E2%80%93+Side+View&quot;);
+                        background-color: var(--bg-2);
+                    "
+                ></div>
+                <div
+                    class="slide"
+                    style="
+                        background-image: url(&quot;https://placehold.co/1920x1080/0e0e18/18181f?text=Exomudra+Glove+%E2%80%93+In+Action&quot;);
+                        background-color: var(--bg-3);
+                    "
+                ></div>
+            </div>
+            <div class="container">
+                <div class="hero-inner">
+                    <div class="hero-tag">Next-Gen Human Machine Interface</div>
+                    <h1>
+                        Your hands are the <span class="grad">controller.</span>
+                    </h1>
+                    <p>
+                        Wireless smart gloves that pair any human hand gesture
+                        to a digital signal. Because the most powerful interface
+                        you own is already attached to your body.
                     </p>
-                    <a
-                        href="mailto:contact@exomudra.com"
-                        class="btn btn-p"
-                        style="margin-top: 0.5rem"
-                    >
-                        <svg
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path
-                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                            />
-                            <polyline points="22,6 12,13 2,6" />
-                        </svg>
-                        contact@exomudra.com
-                    </a>
+                    <div class="hero-btns">
+                        <a href="#store" class="btn btn-p">Explore Products</a>
+                        <a href="#about" class="btn btn-o">Our Thesis</a>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+            <div class="dots">
+                <button class="dot active" data-s="0"></button>
+                <button class="dot" data-s="1"></button>
+                <button class="dot" data-s="2"></button>
+            </div>
+        </section>
 
-        <!-- ═══════════ BLOG POST ═══════════ -->
-        <div class="blog-post" id="blogPost">
-            <div class="blog-post-head">
-                <a href="#blog" class="blog-post-back" onclick="toMain()">
+        <!-- ABOUT -->
+        <section class="sec" id="about">
+            <div class="container">
+                <div class="sec-center">
+                    <span class="sec-label">// Our Thesis</span>
+                    <h2>Bringing the machine to the body.</h2>
+                </div>
+
+                <div class="thesis fi">
+                    <p>
+                        Every technology that touches us intimately has followed
+                        the same arc.
+                        <span class="highlight"
+                            >It moved closer to the body.</span
+                        >
+                        Speakers shrank from rooms to earbuds. Projectors became
+                        displays strapped to our faces. Content found the body.
+                        Control hasn't.
+                    </p>
+                    <p>
+                        We still reach for keyboards, mice, and rigid
+                        controllers&nbsp;&mdash;&nbsp;machines that force our
+                        hands to conform to their shape. But almost everything
+                        we do to act on the world, we do with our hands.
+                    </p>
+                    <p>
+                        <span class="highlight"
+                            >Exomudra inverts the equation.</span
+                        >
+                        We build smart gloves that map any hand gesture to any
+                        digital signal&nbsp;&mdash;&nbsp;structuring the machine
+                        around the hand, not the other way around. The
+                        applications are as limitless as what hands can do.
+                    </p>
+                    <p>
+                        We're starting where it matters most:
+                        <span class="highlight"
+                            >rehabilitation and patient monitoring</span
+                        >
+                        for medical professionals, and
+                        <span class="highlight">sign language translation</span>
+                        for the 70&nbsp;million people the world still can't
+                        hear.
+                    </p>
+                </div>
+
+                <div class="about-grid stagger">
+                    <div class="about-card fi">
+                        <div class="about-card-icon">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Healthcare &amp; Rehabilitation</h4>
+                            <p>
+                                Active force feedback enables programmable
+                                resistance for finger strengthening. Therapists
+                                get objective range-of-motion and force data
+                                over time.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-card fi">
+                        <div class="about-card-icon">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
+                                />
+                                <circle cx="9" cy="7" r="4" />
+                                <path
+                                    d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+                                />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Sign Language Accessibility</h4>
+                            <p>
+                                Real-time gesture-to-text translation to bridge
+                                communication for 70M+ sign language users
+                                worldwide.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-card fi">
+                        <div class="about-card-icon">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M6 3h12l4 6-10 13L2 9z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Precision Gesture Tracking</h4>
+                            <p>
+                                IMU + flex sensor fusion with proprietary
+                                algorithms for sub-centimeter finger tracking
+                                accuracy and ultra-low latency.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-card fi">
+                        <div class="about-card-icon">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="3" />
+                                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Active Force Feedback</h4>
+                            <p>
+                                Motor-driven resistance on each finger creates
+                                the sensation of gripping real objects in
+                                virtual space.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-card fi">
+                        <div class="about-card-icon">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="2"
+                                    y="3"
+                                    width="20"
+                                    height="14"
+                                    rx="2"
+                                    ry="2"
+                                />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Cross-Platform</h4>
+                            <p>
+                                Windows, macOS, Linux. Unity, Unreal Engine,
+                                SteamVR, and mobile devices out of the box.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-card fi">
+                        <div class="about-card-icon">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Fully Mobile</h4>
+                            <p>
+                                Self-contained wireless glove. No external
+                                trackers, no cameras, no tethers. Just put it
+                                on.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-nums stagger">
+                    <div class="about-num fi">
+                        <h4>2021</h4>
+                        <span>Founded</span>
+                    </div>
+                    <div class="about-num fi">
+                        <h4>2-5x</h4>
+                        <span>Lower cost</span>
+                    </div>
+                    <div class="about-num fi">
+                        <h4>$49.5B</h4>
+                        <span>VR/AR market</span>
+                    </div>
+                    <div class="about-num fi">
+                        <h4>70M+</h4>
+                        <span>Sign language users</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STORE -->
+        <section class="sec" id="store">
+            <div class="container">
+                <div class="sec-center">
+                    <span class="sec-label">// Store</span>
+                    <h2>Choose your Exomudra.</h2>
+                    <p class="sec-desc">
+                        Two tiers designed for different needs. Both ship with
+                        the Exomudra Configurator&nbsp;&mdash;&nbsp;a free tool
+                        that patches firmware so you can map the glove as any
+                        input device.
+                    </p>
+                </div>
+                <div class="store-grid stagger">
+                    <!-- Beacon (Lite) -->
+                    <div class="prod fi">
+                        <span class="prod-badge badge-l">Lite</span>
+                        <h3>Exomudra Beacon</h3>
+                        <p class="prod-sub">
+                            Gesture tracking for communication &amp; control
+                        </p>
+                        <div class="prod-price" style="color: var(--accent-2)">
+                            &#8377; 25,000
+                        </div>
+                        <p class="prod-pn">
+                            Includes 1 year software subscription
+                        </p>
+                        <ul class="prod-feats">
+                            <li>
+                                Precision gesture tracking with IMU + flex
+                                sensors
+                            </li>
+                            <li>
+                                Designed for sign language translation &amp;
+                                accessibility
+                            </li>
+                            <li>Wireless low-latency connectivity</li>
+                            <li>Cross-platform (Windows, macOS, Linux)</li>
+                            <li>Lightweight ergonomic build</li>
+                            <li>
+                                Free Configurator for universal device mapping
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn btn-o">Pre-order Now</a>
+                    </div>
+
+                    <!-- Forge (Pro) -->
+                    <div class="prod feat fi">
+                        <span class="prod-badge badge-p">Pro</span>
+                        <h3>Exomudra Forge</h3>
+                        <p class="prod-sub">
+                            Force feedback for rehabilitation &amp; immersive
+                            control
+                        </p>
+                        <div class="prod-price">&#8377; 50,000</div>
+                        <p class="prod-pn">
+                            Includes 1 year software subscription
+                        </p>
+                        <ul class="prod-feats">
+                            <li>Everything in Beacon, plus:</li>
+                            <li>
+                                Active force-feedback motors for finger
+                                resistance
+                            </li>
+                            <li>
+                                Haptic feedback on touching virtual surfaces
+                            </li>
+                            <li>
+                                Programmable resistance for patient
+                                rehabilitation
+                            </li>
+                            <li>
+                                Immersive VR/AR control with tactile response
+                            </li>
+                            <li>
+                                Free Configurator for universal device mapping
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn btn-p">Pre-order Now</a>
+                    </div>
+                </div>
+
+                <div class="store-extras">
+                    <div class="store-extras-grid stagger">
+                        <div class="store-extra fi">
+                            <h4>
+                                <svg
+                                    width="15"
+                                    height="15"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                    />
+                                </svg>
+                                Software Subscription
+                            </h4>
+                            <p>
+                                First year free with hardware. Annual
+                                subscription for continued software updates,
+                                cloud features, and gesture library access.
+                            </p>
+                        </div>
+                        <div class="store-extra fi">
+                            <h4>
+                                <svg
+                                    width="15"
+                                    height="15"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <polyline points="16 18 22 12 16 6" />
+                                    <polyline points="8 6 2 12 8 18" />
+                                </svg>
+                                Free Configurator
+                            </h4>
+                            <p>
+                                Every unit ships with the Exomudra
+                                Configurator&nbsp;&mdash;&nbsp;patch the
+                                firmware to map the glove as any hardware input
+                                device for any use case.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="sec" id="contact" style="padding: 72px 0">
+            <div class="container sec-center">
+                <span class="sec-label">// Get in Touch</span>
+                <h2>Let's build the future together.</h2>
+                <p class="sec-desc">
+                    Interested in Exomudra? Have questions about our products,
+                    want to partner, or just want to say hello?
+                </p>
+                <a
+                    href="mailto:contact@exomudra.com"
+                    class="btn btn-p"
+                    style="margin-top: 0.5rem"
+                >
                     <svg
-                        width="15"
-                        height="15"
+                        width="16"
+                        height="16"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -1587,30 +1349,29 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                     >
-                        <line x1="19" y1="12" x2="5" y2="12" />
-                        <polyline points="12 19 5 12 12 5" />
+                        <path
+                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                        />
+                        <polyline points="22,6 12,13 2,6" />
                     </svg>
-                    Back to Blog
+                    contact@exomudra.com
                 </a>
-                <div class="meta" id="bpMeta"></div>
-                <h1 id="bpTitle"></h1>
             </div>
-            <div class="blog-post-body" id="bpBody"></div>
-        </div>
+        </section>
 
-        <!-- ═══════════ FOOTER ═══════════ -->
+        <!-- FOOTER -->
         <footer>
             <div class="container">
                 <div class="foot-grid">
                     <div class="foot-brand">
-                        <a href="#home" class="logo" onclick="toMain()">
+                        <a href="#home" class="logo">
                             <img src="logo.png" alt="Exomudra Logo" />
                             <span>Exomudra</span>
                         </a>
                         <p>
                             Building the next generation human machine
-                            interface. Wireless smart gloves for VR, gaming,
-                            accessibility, and beyond.
+                            interface. Smart gloves that structure around the
+                            human body, not the other way around.
                         </p>
                         <div class="foot-social">
                             <a
@@ -1631,7 +1392,7 @@
                                 </svg>
                             </a>
                             <a
-                                href="https://www.youtube.com/@exomudra"
+                                href="https://www.youtube.com/@Exomudra"
                                 target="_blank"
                                 rel="noopener"
                                 aria-label="YouTube"
@@ -1647,20 +1408,42 @@
                                     />
                                 </svg>
                             </a>
+                            <a
+                                href="https://medium.com/exomudra"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="Medium"
+                            >
+                                <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"
+                                    />
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="foot-col">
                         <h4>Navigation</h4>
-                        <a href="#home" onclick="toMain()">Home</a>
-                        <a href="#about" onclick="toMain()">About</a>
-                        <a href="#store" onclick="toMain()">Store</a>
-                        <a href="#blog" onclick="toMain()">Blog</a>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#store">Store</a>
+                        <a
+                            href="https://medium.com/exomudra"
+                            target="_blank"
+                            rel="noopener"
+                            >Blog</a
+                        >
                     </div>
                     <div class="foot-col">
                         <h4>Products</h4>
-                        <a href="#store" onclick="toMain()">Exomudra Sanjna</a>
-                        <a href="#store" onclick="toMain()">Exomudra Shakti</a>
-                        <a href="#store" onclick="toMain()">Configurator</a>
+                        <a href="#store">Exomudra Beacon</a>
+                        <a href="#store">Exomudra Forge</a>
+                        <a href="#store">Configurator</a>
                     </div>
                     <div class="foot-col">
                         <h4>Connect</h4>
@@ -1674,10 +1457,16 @@
                             >LinkedIn</a
                         >
                         <a
-                            href="https://www.youtube.com/@exomudra"
+                            href="https://www.youtube.com/@Exomudra"
                             target="_blank"
                             rel="noopener"
                             >YouTube</a
+                        >
+                        <a
+                            href="https://medium.com/exomudra"
+                            target="_blank"
+                            rel="noopener"
+                            >Medium</a
                         >
                     </div>
                 </div>
@@ -1700,178 +1489,6 @@
         </footer>
 
         <script>
-            // ══════════════════════════════════════
-            //  BLOG POSTS
-            //  To publish a new post: add an object
-            //  to BLOG_POSTS. Deploy. Done.
-            // ══════════════════════════════════════
-            const BLOG_POSTS = [
-                {
-                    slug: "welcome-to-exomudra",
-                    title: "Welcome to Exomudra \u2014 Our Journey Begins",
-                    date: "2025-01-15",
-                    tag: "Update",
-                    excerpt:
-                        "An introduction to Exomudra Technologies, our mission, and why we believe the future of computing is in your hands.",
-                    image: "",
-                    content: `
-                <p>We started Exomudra in 2021 with a simple conviction: the way humans interact with computers is fundamentally broken. Keyboards, mice, and rigid controllers force us to adapt to machines. We believe it should be the other way around.</p>
-                <h2>The Problem</h2>
-                <p>Consider the VR industry. You put on a headset that immerses you in a completely new world \u2014 then you pick up plastic sticks with buttons to interact with it. The disconnect is jarring. Your brain expects to reach out and grab objects, but your hands are wrapped around controllers designed decades ago.</p>
-                <p>Now consider sign language. Over 70 million deaf people worldwide use sign language as their primary form of communication, yet 9 out of 10 don\u2019t have access to affordable, accurate translation technology. Real-time translation exists in research labs, but it\u2019s expensive, bulky, and inaccessible.</p>
-                <h2>Our Approach</h2>
-                <p>Exomudra is building wireless smart gloves that capture every nuance of hand and finger movement. We use a combination of IMU sensors, flex sensors, and our proprietary sensor fusion firmware to deliver:</p>
-                <ul>
-                    <li>Sub-centimeter gesture tracking accuracy</li>
-                    <li>Ultra-low latency wireless communication</li>
-                    <li>Active haptic feedback for tactile immersion</li>
-                    <li>Cross-platform compatibility out of the box</li>
-                    <li>2\u20135x lower cost than competitors</li>
-                </ul>
-                <h2>What\u2019s Next</h2>
-                <p>We\u2019re currently refining our sensor fusion algorithms and mechanical design. Our first GTM phase starts with the launch of immersive, controller-free VR interaction via smart gloves \u2014 targeting the PC VR / SteamVR ecosystem, indie game studios, and creative professionals.</p>
-                <blockquote>The best interface is no interface. The next best interface is your own hands.</blockquote>
-                <p>If you\u2019re interested in what we\u2019re building \u2014 whether as a potential user, partner, or investor \u2014 reach out at <a href="mailto:contact@exomudra.com">contact@exomudra.com</a>.</p>
-            `,
-                },
-                {
-                    slug: "force-feedback-explained",
-                    title: "How Active Force Feedback Works in Exomudra Shakti",
-                    date: "2025-02-20",
-                    tag: "Technology",
-                    excerpt:
-                        "A technical deep dive into the motor-driven resistance system that lets you feel virtual objects with your fingers.",
-                    image: "",
-                    content: `
-                <p>One of the defining features of the Exomudra Shakti is its active force-feedback system. Unlike passive haptics (vibration motors), our system uses miniature servo motors to physically resist finger movement, creating the sensation of touching and gripping real objects in virtual space.</p>
-                <h2>Why Force Feedback Matters</h2>
-                <p>When you reach out to grab a virtual cup in VR, your fingers pass right through it. Vibration-based haptics can signal \u201cyou touched something,\u201d but they can\u2019t stop your fingers from closing. Force feedback can.</p>
-                <p>By introducing controlled resistance at each finger joint via a rack-and-pinion mechanism connected to smart servos, we create the illusion of solidity. Your brain interprets the mechanical resistance as a physical object, dramatically increasing presence and immersion.</p>
-                <h2>The Mechanism</h2>
-                <p>Each finger on the Shakti glove is equipped with a tendon-driven mechanism connected to a micro servo motor. When the software detects contact with a virtual surface, it commands the motor to apply calibrated resistance. We use magnetic encoders (AS5600) for 0.087\u00b0 angular resolution and sub-millisecond position feedback.</p>
-                <ul>
-                    <li><strong>Gripping:</strong> Motors resist finger closure proportional to virtual object hardness</li>
-                    <li><strong>Surface contact:</strong> Brief resistance pulse simulates tapping a surface</li>
-                    <li><strong>Rehabilitation:</strong> Programmable resistance profiles for progressive finger strengthening</li>
-                </ul>
-                <h3>Dual Use: Rehabilitation</h3>
-                <p>The same force-feedback system that enables VR immersion doubles as a rehabilitation tool. Patients recovering from hand injuries or strokes can use the Shakti glove with prescribed resistance programs to strengthen their fingers progressively. The software tracks range of motion and force metrics over time, giving therapists objective data on recovery progress.</p>
-                <h2>The Engineering Challenge</h2>
-                <p>Building force feedback into a wearable glove is hard. The motors need to be small enough to wear comfortably, powerful enough to create convincing resistance, quiet enough not to break immersion, and energy-efficient enough to run on a battery. We evaluated over 12 different resistance mechanism technologies \u2014 from magnetorheological brakes to electroadhesive clutches \u2014 before arriving at our current approach that balances performance, weight, and cost for the Indian market.</p>
-                <p>In future posts, we\u2019ll go deeper into the sensor fusion algorithms that determine when and how much force to apply. Stay tuned.</p>
-            `,
-                },
-                {
-                    slug: "configurator-universal-input",
-                    title: "The Exomudra Configurator: One Glove, Any Device",
-                    date: "2025-03-10",
-                    tag: "Product",
-                    excerpt:
-                        "How our free firmware configurator lets you map the Exomudra glove to replace any hardware input device.",
-                    image: "",
-                    content: `
-                <p>Every Exomudra glove \u2014 whether Sanjna or Shakti \u2014 ships with the Exomudra Configurator, a desktop application that lets you remap the glove\u2019s gesture outputs to any hardware input protocol.</p>
-                <h2>What Does That Mean?</h2>
-                <p>Out of the box, Exomudra gloves work as gesture controllers for VR, gaming, and sign language translation. But what if you want to use them as a MIDI controller for music production? Or as a mouse replacement for someone with limited mobility? Or as a presentation remote?</p>
-                <p>The Configurator makes this possible. It patches the glove\u2019s firmware to output whatever HID (Human Interface Device) protocol you need.</p>
-                <h2>How It Works</h2>
-                <ul>
-                    <li><strong>Connect:</strong> Plug in your Exomudra glove via USB</li>
-                    <li><strong>Map:</strong> Use the visual editor to assign finger gestures and hand positions to keyboard shortcuts, mouse actions, MIDI signals, or gamepad inputs</li>
-                    <li><strong>Flash:</strong> One click to patch the firmware with your custom profile</li>
-                    <li><strong>Use:</strong> Disconnect USB, and the glove now operates wirelessly with your custom mapping</li>
-                </ul>
-                <h2>Community Profiles</h2>
-                <p>We\u2019re building a profile library where users can share and download pre-made configurations for popular applications \u2014 Blender, DaVinci Resolve, Ableton Live, Unity, and more. Found a great mapping? Share it. Need one for a niche tool? Chances are someone\u2019s already built it.</p>
-                <h2>Why It\u2019s Free</h2>
-                <p>We believe the hardware you buy should be truly yours. The Configurator isn\u2019t a premium add-on \u2014 it\u2019s a fundamental part of the product. No subscriptions, no paywalls, no artificial limitations. You bought the glove. You own the glove. Do whatever you want with it.</p>
-                <p>The Configurator is currently in beta. If you\u2019d like early access, reach out at <a href="mailto:contact@exomudra.com">contact@exomudra.com</a>.</p>
-            `,
-                },
-            ];
-
-            // ══════════════════════════════════════
-            //  RENDERING
-            // ══════════════════════════════════════
-            function fmtDate(d) {
-                return new Date(d + "T00:00:00").toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                });
-            }
-
-            function renderBlog() {
-                var g = document.getElementById("blogGrid");
-                g.innerHTML = BLOG_POSTS.map(function (p) {
-                    return (
-                        '<a class="blog-card fi" href="#" onclick="openPost(\'' +
-                        p.slug +
-                        "');return false\">" +
-                        '<div class="blog-card-img">' +
-                        (p.image
-                            ? '<img src="' +
-                              p.image +
-                              '" alt="' +
-                              p.title +
-                              '">'
-                            : '<svg class="ph" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>') +
-                        "</div>" +
-                        '<div class="blog-card-body">' +
-                        '<div class="blog-card-date">' +
-                        fmtDate(p.date) +
-                        "</div>" +
-                        "<h3>" +
-                        p.title +
-                        "</h3>" +
-                        "<p>" +
-                        p.excerpt +
-                        "</p>" +
-                        "</div>" +
-                        '<div class="blog-card-foot">' +
-                        '<span class="blog-rm">Read more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>' +
-                        '<span class="blog-tag">' +
-                        p.tag +
-                        "</span>" +
-                        "</div>" +
-                        "</a>"
-                    );
-                }).join("");
-                document
-                    .querySelectorAll("#blogGrid .fi")
-                    .forEach(function (el) {
-                        obs.observe(el);
-                    });
-            }
-
-            function openPost(slug) {
-                var p = BLOG_POSTS.find(function (x) {
-                    return x.slug === slug;
-                });
-                if (!p) return;
-                document.getElementById("main").classList.add("hidden");
-                document.getElementById("blogPost").classList.add("active");
-                document.getElementById("bpTitle").textContent = p.title;
-                document.getElementById("bpMeta").textContent =
-                    fmtDate(p.date) + "  \u00b7  " + p.tag;
-                document.getElementById("bpBody").innerHTML = p.content;
-                window.scrollTo({ top: 0, behavior: "instant" });
-                history.pushState({ blog: slug }, "", "#blog/" + slug);
-            }
-
-            function toMain() {
-                document.getElementById("main").classList.remove("hidden");
-                document.getElementById("blogPost").classList.remove("active");
-            }
-
-            window.addEventListener("popstate", function (e) {
-                if (e.state && e.state.blog) {
-                    openPost(e.state.blog);
-                } else {
-                    toMain();
-                }
-            });
-
             // ══════════════════════════════════════
             //  SLIDESHOW
             // ══════════════════════════════════════
@@ -1950,30 +1567,17 @@
             document.querySelectorAll('a[href^="#"]').forEach(function (a) {
                 a.addEventListener("click", function (e) {
                     var href = this.getAttribute("href");
-                    if (href === "#" || href.indexOf("#blog/") === 0) return;
+                    if (href === "#") return;
                     var t = document.querySelector(href);
                     if (t) {
                         e.preventDefault();
-                        toMain();
-                        setTimeout(function () {
-                            t.scrollIntoView({
-                                behavior: "smooth",
-                                block: "start",
-                            });
-                        }, 10);
+                        t.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
                     }
                 });
             });
-
-            // ══════════════════════════════════════
-            //  INIT
-            // ══════════════════════════════════════
-            renderBlog();
-            (function () {
-                var h = window.location.hash;
-                if (h.indexOf("#blog/") === 0)
-                    openPost(h.replace("#blog/", ""));
-            })();
         </script>
     </body>
 </html>
