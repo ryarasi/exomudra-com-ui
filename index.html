@@ -243,8 +243,13 @@
                 background: var(--accent) !important;
                 color: #fff !important;
                 padding: 7px 18px;
-                border-radius: 4px;
+                border-radius: 0;
                 font-weight: 600 !important;
+                transform: skewX(-12deg);
+            }
+            .nav-cta span {
+                display: inline-block;
+                transform: skewX(12deg);
             }
             .nav-cta:hover {
                 box-shadow: 0 0 20px var(--accent-glow);
@@ -313,11 +318,16 @@
                 letter-spacing: 2.5px;
                 text-transform: uppercase;
                 color: var(--accent);
-                padding: 5px 12px;
+                padding: 5px 14px;
                 margin-bottom: 1.75rem;
                 border: 1px solid var(--accent-dim);
                 background: var(--accent-dim);
-                border-radius: 2px;
+                border-radius: 0;
+                transform: skewX(-12deg);
+            }
+            .hero-tag span {
+                display: inline-block;
+                transform: skewX(12deg);
             }
             .hero h1 {
                 font-size: clamp(2.4rem, 5vw, 3.8rem);
@@ -353,15 +363,22 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 8px;
-                padding: 13px 26px;
+                padding: 13px 28px;
                 font-size: 0.88rem;
                 font-weight: 600;
                 text-decoration: none;
-                border-radius: 4px;
+                border-radius: 0;
                 transition: all 0.3s;
                 cursor: pointer;
                 border: none;
                 font-family: inherit;
+                transform: skewX(-12deg);
+            }
+            .btn span {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                transform: skewX(12deg);
             }
             .btn-p {
                 background: var(--accent);
@@ -369,7 +386,7 @@
             }
             .btn-p:hover {
                 box-shadow: 0 0 32px var(--accent-glow);
-                transform: translateY(-2px);
+                transform: skewX(-12deg) translateY(-2px);
             }
             .btn-o {
                 background: transparent;
@@ -379,6 +396,7 @@
             .btn-o:hover {
                 border-color: var(--accent);
                 color: var(--accent);
+                transform: skewX(-12deg) translateY(-2px);
             }
 
             .dots {
@@ -416,6 +434,14 @@
                 color: var(--accent);
                 margin-bottom: 0.75rem;
                 display: inline-block;
+                padding: 4px 12px;
+                background: var(--accent-dim);
+                border: 1px solid var(--accent-dim);
+                transform: skewX(-12deg);
+            }
+            .sec-label span {
+                display: inline-block;
+                transform: skewX(12deg);
             }
             .sec h2 {
                 font-size: clamp(1.9rem, 3.5vw, 2.8rem);
@@ -587,9 +613,14 @@
                 font-size: 0.62rem;
                 letter-spacing: 2px;
                 text-transform: uppercase;
-                padding: 3px 9px;
-                border-radius: 2px;
+                padding: 3px 10px;
+                border-radius: 0;
                 margin-bottom: 1.25rem;
+                transform: skewX(-12deg);
+            }
+            .prod-badge span {
+                display: inline-block;
+                transform: skewX(12deg);
             }
             .badge-l {
                 color: var(--accent-2);
@@ -901,7 +932,11 @@
                             >YouTube</a
                         >
                     </li>
-                    <li><a href="#contact" class="nav-cta">Contact</a></li>
+                    <li>
+                        <a href="#contact" class="nav-cta"
+                            ><span>Contact</span></a
+                        >
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -909,32 +944,34 @@
         <!-- HERO -->
         <section class="hero" id="home">
             <div class="slideshow">
-                <!-- Replace placeholder URLs with actual product photos -->
+                <!-- Replace these placeholder URLs with actual product photos -->
                 <div
                     class="slide active"
                     style="
-                        background-image: url(&quot;https://placehold.co/1920x1080/0a0a14/14141c?text=Exomudra+Glove+%E2%80%93+Front+View&quot;);
+                        background-image: url(&quot;https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80&auto=format&quot;);
                         background-color: var(--bg);
                     "
                 ></div>
                 <div
                     class="slide"
                     style="
-                        background-image: url(&quot;https://placehold.co/1920x1080/0c0c16/16161f?text=Exomudra+Glove+%E2%80%93+Side+View&quot;);
+                        background-image: url(&quot;https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=1920&q=80&auto=format&quot;);
                         background-color: var(--bg-2);
                     "
                 ></div>
                 <div
                     class="slide"
                     style="
-                        background-image: url(&quot;https://placehold.co/1920x1080/0e0e18/18181f?text=Exomudra+Glove+%E2%80%93+In+Action&quot;);
+                        background-image: url(&quot;https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=1920&q=80&auto=format&quot;);
                         background-color: var(--bg-3);
                     "
                 ></div>
             </div>
             <div class="container">
                 <div class="hero-inner">
-                    <div class="hero-tag">Next-Gen Human Machine Interface</div>
+                    <div class="hero-tag">
+                        <span>Next-Gen Human Machine Interface</span>
+                    </div>
                     <h1>
                         Your hands are the <span class="grad">controller.</span>
                     </h1>
@@ -944,8 +981,12 @@
                         you own is already attached to your body.
                     </p>
                     <div class="hero-btns">
-                        <a href="#store" class="btn btn-p">Explore Products</a>
-                        <a href="#about" class="btn btn-o">Our Thesis</a>
+                        <a href="#store" class="btn btn-p"
+                            ><span>Explore Products</span></a
+                        >
+                        <a href="#about" class="btn btn-o"
+                            ><span>Our Thesis</span></a
+                        >
                     </div>
                 </div>
             </div>
@@ -960,7 +1001,7 @@
         <section class="sec" id="about">
             <div class="container">
                 <div class="sec-center">
-                    <span class="sec-label">// Our Thesis</span>
+                    <span class="sec-label"><span>// Our Thesis</span></span>
                     <h2>Bringing the machine to the body.</h2>
                 </div>
 
@@ -1192,7 +1233,7 @@
         <section class="sec" id="store">
             <div class="container">
                 <div class="sec-center">
-                    <span class="sec-label">// Store</span>
+                    <span class="sec-label"><span>// Store</span></span>
                     <h2>Choose your Exomudra.</h2>
                     <p class="sec-desc">
                         Two tiers designed for different needs. Both ship with
@@ -1204,7 +1245,9 @@
                 <div class="store-grid stagger">
                     <!-- Beacon (Lite) -->
                     <div class="prod fi">
-                        <span class="prod-badge badge-l">Lite</span>
+                        <span class="prod-badge badge-l"
+                            ><span>Lite</span></span
+                        >
                         <h3>Exomudra Beacon</h3>
                         <p class="prod-sub">
                             Gesture tracking for communication &amp; control
@@ -1231,12 +1274,14 @@
                                 Free Configurator for universal device mapping
                             </li>
                         </ul>
-                        <a href="#contact" class="btn btn-o">Pre-order Now</a>
+                        <a href="#contact" class="btn btn-o"
+                            ><span>Pre-order Now</span></a
+                        >
                     </div>
 
                     <!-- Forge (Pro) -->
                     <div class="prod feat fi">
-                        <span class="prod-badge badge-p">Pro</span>
+                        <span class="prod-badge badge-p"><span>Pro</span></span>
                         <h3>Exomudra Forge</h3>
                         <p class="prod-sub">
                             Force feedback for rehabilitation &amp; immersive
@@ -1266,7 +1311,9 @@
                                 Free Configurator for universal device mapping
                             </li>
                         </ul>
-                        <a href="#contact" class="btn btn-p">Pre-order Now</a>
+                        <a href="#contact" class="btn btn-p"
+                            ><span>Pre-order Now</span></a
+                        >
                     </div>
                 </div>
 
@@ -1328,7 +1375,7 @@
         <!-- CONTACT -->
         <section class="sec" id="contact" style="padding: 72px 0">
             <div class="container sec-center">
-                <span class="sec-label">// Get in Touch</span>
+                <span class="sec-label"><span>// Get in Touch</span></span>
                 <h2>Let's build the future together.</h2>
                 <p class="sec-desc">
                     Interested in Exomudra? Have questions about our products,
@@ -1339,22 +1386,24 @@
                     class="btn btn-p"
                     style="margin-top: 0.5rem"
                 >
-                    <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path
-                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                        />
-                        <polyline points="22,6 12,13 2,6" />
-                    </svg>
-                    contact@exomudra.com
+                    <span>
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path
+                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                            />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        contact@exomudra.com
+                    </span>
                 </a>
             </div>
         </section>
