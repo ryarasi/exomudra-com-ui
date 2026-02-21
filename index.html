@@ -234,6 +234,9 @@
                 letter-spacing: 0.5px;
                 text-transform: uppercase;
                 transition: color 0.25s;
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
             }
             .nav-links a:hover,
             .nav-links a.active {
@@ -764,7 +767,9 @@
                 margin-bottom: 1rem;
             }
             .foot-col a {
-                display: block;
+                display: flex;
+                align-items: center;
+                gap: 5px;
                 color: var(--text-2);
                 text-decoration: none;
                 font-size: 0.85rem;
@@ -840,13 +845,12 @@
                     display: none;
                     position: fixed;
                     inset: 0;
-                    background: var(--bg-2);
+                    background: #0e0e14;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     gap: 2rem;
-                    z-index: 99;
-                    backdrop-filter: none;
+                    z-index: 100;
                 }
                 .nav-links.open {
                     display: flex;
@@ -920,16 +924,12 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#store">Store</a></li>
+                    <li></li>
                     <li>
                         <a
                             href="https://medium.com/exomudra"
                             target="_blank"
                             rel="noopener"
-                            style="
-                                display: inline-flex;
-                                align-items: center;
-                                gap: 5px;
-                            "
                             ><svg
                                 width="14"
                                 height="14"
@@ -938,8 +938,9 @@
                             >
                                 <path
                                     d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"
-                                /></svg
-                            >Blog</a
+                                />
+                            </svg>
+                            Blog</a
                         >
                     </li>
                     <li>
@@ -947,11 +948,6 @@
                             href="https://www.youtube.com/@Exomudra"
                             target="_blank"
                             rel="noopener"
-                            style="
-                                display: inline-flex;
-                                align-items: center;
-                                gap: 5px;
-                            "
                             ><svg
                                 width="14"
                                 height="14"
@@ -960,8 +956,9 @@
                             >
                                 <path
                                     d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                                /></svg
-                            >YouTube</a
+                                />
+                            </svg>
+                            YouTube</a
                         >
                     </li>
                     <li>
@@ -1528,11 +1525,6 @@
                             href="https://medium.com/exomudra"
                             target="_blank"
                             rel="noopener"
-                            style="
-                                display: inline-flex;
-                                align-items: center;
-                                gap: 5px;
-                            "
                             ><svg
                                 width="13"
                                 height="13"
@@ -1541,8 +1533,9 @@
                             >
                                 <path
                                     d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"
-                                /></svg
-                            >Blog</a
+                                />
+                            </svg>
+                            Blog</a
                         >
                     </div>
                     <div class="foot-col">
@@ -1566,11 +1559,6 @@
                             href="https://www.youtube.com/@Exomudra"
                             target="_blank"
                             rel="noopener"
-                            style="
-                                display: inline-flex;
-                                align-items: center;
-                                gap: 5px;
-                            "
                             ><svg
                                 width="13"
                                 height="13"
@@ -1579,18 +1567,14 @@
                             >
                                 <path
                                     d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                                /></svg
-                            >YouTube</a
+                                />
+                            </svg>
+                            YouTube</a
                         >
                         <a
                             href="https://medium.com/exomudra"
                             target="_blank"
                             rel="noopener"
-                            style="
-                                display: inline-flex;
-                                align-items: center;
-                                gap: 5px;
-                            "
                             ><svg
                                 width="13"
                                 height="13"
@@ -1599,8 +1583,9 @@
                             >
                                 <path
                                     d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"
-                                /></svg
-                            >Medium</a
+                                />
+                            </svg>
+                            Medium</a
                         >
                     </div>
                 </div>
