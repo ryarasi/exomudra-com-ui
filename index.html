@@ -957,19 +957,36 @@
         margin-top: 1.5rem;
       }
 
+      @keyframes dot-drain {
+        from { width: 100%; }
+        to { width: 0%; }
+      }
+
       .carousel-dot {
-        width: 32px;
+        width: 48px;
         height: 4px;
         background: var(--text-3);
         border: none;
         cursor: pointer;
         border-radius: 2px;
-        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
       }
 
-      .carousel-dot.active {
+      .carousel-dot::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
         background: var(--accent);
-        width: 48px;
+        border-radius: 2px;
+      }
+
+      .carousel-dot.active::after {
+        width: 100%;
+        animation: dot-drain 4s linear forwards;
       }
 
       @media (max-width: 768px) {
@@ -1687,6 +1704,15 @@
       var prevBtn = document.querySelector(".carousel-prev");
       var nextBtn = document.querySelector(".carousel-next");
       var currentVideo = 0;
+      var autoSwitchTimer = null;
+      var AUTO_SWITCH_MS = 4000;
+
+      function startAutoSwitch() {
+        clearTimeout(autoSwitchTimer);
+        autoSwitchTimer = setTimeout(function () {
+          goToVideo(currentVideo + 1);
+        }, AUTO_SWITCH_MS);
+      }
 
       function goToVideo(index) {
         videoSlides[currentVideo].classList.remove("active");
@@ -1694,6 +1720,7 @@
         currentVideo = (index + videoSlides.length) % videoSlides.length;
         videoSlides[currentVideo].classList.add("active");
         videoDots[currentVideo].classList.add("active");
+        startAutoSwitch();
       }
 
       prevBtn.addEventListener("click", function () {
@@ -1709,6 +1736,9 @@
           goToVideo(index);
         });
       });
+
+      // Start auto-switch on load
+      startAutoSwitch();
     </script>
   </body>
 </html>
