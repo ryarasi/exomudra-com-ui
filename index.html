@@ -1046,17 +1046,69 @@
         min-height: 1.2em;
         color: var(--text-2);
       }
-      .ea-embed {
-        max-width: 640px;
-        margin: 0.5rem auto 0;
+      .ea-spinner {
+        width: 15px;
+        height: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.45);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: ea-spin 0.7s linear infinite;
       }
-      .ea-embed iframe {
-        width: 100%;
-        height: 480px;
-        border: 0;
+      @keyframes ea-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .ea-check {
+        width: 16px;
+        height: 16px;
+      }
+      .btn-p.ea-done,
+      .btn-p.ea-done:hover {
+        background: #16a34a;
+        box-shadow: 0 0 26px rgba(22, 163, 74, 0.5);
+        transform: skewX(-12deg);
+        cursor: default;
+      }
+      .ea-toast {
+        position: fixed;
+        left: 50%;
+        bottom: 28px;
+        transform: translateX(-50%) translateY(170%);
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        max-width: 92vw;
+        padding: 13px 20px 13px 14px;
+        background: #0e1711;
+        border: 1px solid rgba(34, 197, 94, 0.45);
         border-radius: 12px;
-        background: #fff;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        color: #e9fbec;
+        font-size: 0.92rem;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+        opacity: 0;
+        z-index: 3000;
+        transition:
+          transform 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.25),
+          opacity 0.4s ease;
+      }
+      .ea-toast.show {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+      }
+      .ea-toast .tcheck {
+        flex-shrink: 0;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: #16a34a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ea-toast .tcheck svg {
+        width: 15px;
+        height: 15px;
       }
       @media (max-width: 480px) {
         .ea-form {
@@ -1822,6 +1874,21 @@
       </div>
     </footer>
 
+    <div id="ea-toast" class="ea-toast" role="status" aria-live="polite">
+      <span class="tcheck"
+        ><svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#fff"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="20 6 9 17 4 12"></polyline></svg
+      ></span>
+      <span>You're on the list &mdash; we'll email you at launch.</span>
+    </div>
+
     <script>
       // ══════════════════════════════════════
       //  SLIDESHOW
@@ -1831,11 +1898,11 @@
       var dots = document.querySelectorAll(".dot");
 
       function goSlide(i) {
-        slides[cur].classList.remove("active");
-        dots[cur].classList.remove("active");
+        if (slides[cur]) slides[cur].classList.remove("active");
+        if (dots[cur]) dots[cur].classList.remove("active");
         cur = i;
-        slides[cur].classList.add("active");
-        dots[cur].classList.add("active");
+        if (slides[cur]) slides[cur].classList.add("active");
+        if (dots[cur]) dots[cur].classList.add("active");
       }
 
       dots.forEach(function (b) {
@@ -1967,26 +2034,48 @@
         var form = document.getElementById("ea-form");
         if (!form) return;
         var msg = document.getElementById("ea-msg");
+        var input = document.getElementById("ea-email");
+        var btn = form.querySelector('button[type="submit"]');
+        var btnSpan = btn.querySelector("span");
+        var CHECK =
+          '<svg class="ea-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
         form.addEventListener("submit", function (e) {
           e.preventDefault();
-          var email = document.getElementById("ea-email").value.trim();
+          if (form.dataset.done === "1") return;
+          var email = input.value.trim();
           if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
             msg.style.color = "var(--accent-2)";
             msg.textContent = "Please enter a valid email address.";
             return;
           }
+          // 1) loading state, so the visitor sees something is happening
+          btn.disabled = true;
+          input.disabled = true;
+          msg.textContent = "";
+          btnSpan.innerHTML = '<span class="ea-spinner"></span>Joining…';
+          // fire the real submission in the background
           var data = new FormData();
           data.append(EMAIL_FIELD, email);
           data.append("fvv", "1");
           data.append("pageHistory", "0");
-          // Google Forms doesn't allow reading the cross-origin response,
-          // so we post with no-cors and confirm optimistically.
+          // Google Forms blocks reading the cross-origin response, so we post
+          // with no-cors and confirm after a short, deliberate beat.
           fetch(FORM_ACTION, { method: "POST", mode: "no-cors", body: data }).catch(
             function () {},
           );
-          form.reset();
-          msg.style.color = "var(--accent)";
-          msg.textContent = "You're on the list. We'll be in touch.";
+          // 2) confirm clearly and positively
+          setTimeout(function () {
+            form.dataset.done = "1";
+            btn.classList.add("ea-done");
+            btnSpan.innerHTML = CHECK + "Joined";
+            var toast = document.getElementById("ea-toast");
+            if (toast) {
+              toast.classList.add("show");
+              setTimeout(function () {
+                toast.classList.remove("show");
+              }, 4800);
+            }
+          }, 1200);
         });
       })();
     </script>
