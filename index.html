@@ -1046,6 +1046,18 @@
         min-height: 1.2em;
         color: var(--text-2);
       }
+      .ea-embed {
+        max-width: 640px;
+        margin: 0.5rem auto 0;
+      }
+      .ea-embed iframe {
+        width: 100%;
+        height: 480px;
+        border: 0;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
       @media (max-width: 480px) {
         .ea-form {
           flex-direction: column;
@@ -1057,6 +1069,68 @@
         .ea-input {
           min-width: 0;
           width: 100%;
+        }
+      }
+
+      /* ═══ DOWNLOAD ═══ */
+      .dl-btns {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .dl-meta {
+        margin-top: 1.1rem;
+        font-size: 0.8rem;
+        color: var(--text-3);
+        font-family: "JetBrains Mono", monospace;
+      }
+      .dl-note {
+        max-width: 640px;
+        margin: 1.75rem auto 0;
+        text-align: left;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0 1.25rem;
+      }
+      .dl-note summary {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 0.9rem 0;
+        color: var(--text);
+      }
+      .dl-note summary:hover {
+        color: var(--accent);
+      }
+      .dl-note > div {
+        padding-bottom: 1rem;
+      }
+      .dl-note p {
+        font-size: 0.85rem;
+        color: var(--text-2);
+        line-height: 1.7;
+        margin-bottom: 0.6rem;
+      }
+      .dl-note code {
+        display: inline-block;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.78rem;
+        background: var(--bg-3);
+        color: var(--accent-2);
+        padding: 3px 8px;
+        border-radius: 4px;
+        word-break: break-all;
+        margin: 2px 0;
+      }
+      @media (max-width: 480px) {
+        .dl-btns {
+          flex-direction: column;
+        }
+        .dl-btns .btn {
+          width: 100%;
+          justify-content: center;
         }
       }
     </style>
@@ -1075,6 +1149,7 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#store">Store</a></li>
+          <li><a href="#download">Download</a></li>
           <li><a href="#early-access">Early Access</a></li>
           <li>
             <a href="https://medium.com/exomudra" target="_blank" rel="noopener"
@@ -1134,8 +1209,8 @@
             attached to your body.
           </p>
           <div class="hero-btns">
-            <a href="#store" class="btn btn-p"><span>Explore Products</span></a>
-            <a href="#about" class="btn btn-o"><span>Our Thesis</span></a>
+            <a href="#download" class="btn btn-p"><span>Download Free App</span></a>
+            <a href="#store" class="btn btn-o"><span>Explore Products</span></a>
           </div>
         </div>
       </div>
@@ -1431,6 +1506,68 @@
       </div>
     </section>
 
+    <!-- DOWNLOAD -->
+    <section class="sec sec-center" id="download">
+      <div class="container">
+        <span class="sec-label"><span>// Try it free</span></span>
+        <h2>Download the desktop app.</h2>
+        <p class="sec-desc">
+          See your hand come alive on any webcam. The Exomudra desktop app reads
+          your hand in real time and drives a live 3D hand on
+          screen&nbsp;&mdash;&nbsp;the same engine behind our gloves. Free
+          preview build.
+        </p>
+        <div class="dl-btns">
+          <a
+            href="https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/osx/Exomudra.Desktop-osx-Setup-0.1.15.pkg"
+            class="btn btn-p"
+            download
+            ><span>Download for macOS</span></a
+          >
+          <a
+            href="https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/win/Exomudra.Desktop-win-Setup-0.1.15.exe"
+            class="btn btn-o"
+            download
+            ><span>Download for Windows</span></a
+          >
+        </div>
+        <p class="dl-meta">
+          Version 0.1.15 &middot; released 2026-10-07 &middot; macOS .pkg
+          (131&nbsp;MB) / Windows .exe (166&nbsp;MB) &middot; unsigned preview
+          build
+        </p>
+        <details class="dl-note">
+          <summary>Opening the app on first launch</summary>
+          <div>
+            <p>
+              This preview build isn&apos;t code-signed yet, so your OS warns on
+              first launch. One-time steps:
+            </p>
+            <p>
+              <strong>macOS:</strong> Gatekeeper blocks the unsigned installer
+              (on macOS&nbsp;15 there&apos;s no
+              right-click&nbsp;&rarr;&nbsp;Open). Easiest
+              fix&nbsp;&mdash;&nbsp;in Terminal, clear the download flag, then
+              double-click the&nbsp;.pkg:<br />
+              <code
+                >xattr -d com.apple.quarantine
+                ~/Downloads/Exomudra.Desktop-osx-Setup-0.1.15.pkg</code
+              ><br />
+              Or double-click, and on the warning go to
+              <em>System Settings &rarr; Privacy &amp; Security</em> &rarr;
+              scroll down &rarr; <em>Open Anyway</em>. If the installed app
+              won&apos;t launch, use <em>Open Anyway</em> for it once too.
+            </p>
+            <p>
+              <strong>Windows</strong> (run on a Windows PC, not via Wine on
+              Mac): on the SmartScreen prompt, click <em>More info</em> &rarr;
+              <em>Run anyway</em>.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
     <!-- STORE -->
     <section class="sec" id="store">
       <div class="container">
@@ -1546,11 +1683,12 @@
     <section class="sec sec-center" id="early-access" style="background: var(--bg-2)">
       <div class="container">
         <span class="sec-label"><span>// Early Access</span></span>
-        <h2>Be first to try it.</h2>
+        <h2>Join the waitlist.</h2>
         <p class="sec-desc">
-          The Exomudra Configurator and our first hardware units are on the way.
-          Join the early-access list and we'll email you the moment you can get
-          your hands on them. No spam, just the launch.
+          The desktop app is free to download today. Our first
+          hardware&nbsp;&mdash;&nbsp;the Beacon and Forge gloves&nbsp;&mdash;&nbsp;is
+          on the way. Drop your email and we'll tell you the moment you can get
+          one.
         </p>
         <form id="ea-form" class="ea-form" novalidate>
           <input
@@ -1820,12 +1958,12 @@
       startAutoSwitch();
 
       // ══════════════════════════════════════
-      //  EARLY ACCESS SIGNUP
+      //  WAITLIST SIGNUP  →  Google Form
       // ══════════════════════════════════════
       (function () {
-        // TODO: paste your form endpoint here (e.g. Formspree: https://formspree.io/f/xxxxxxx).
-        // While this is empty, the form falls back to opening the visitor's email app.
-        var EA_ENDPOINT = "";
+        var FORM_ACTION =
+          "https://docs.google.com/forms/d/e/1FAIpQLSfrMfn_BRmBogzHHuKzdXG37BHl1o7wNBPm7RuO3QSMT1FTrA/formResponse";
+        var EMAIL_FIELD = "entry.466209938";
         var form = document.getElementById("ea-form");
         if (!form) return;
         var msg = document.getElementById("ea-msg");
@@ -1837,33 +1975,18 @@
             msg.textContent = "Please enter a valid email address.";
             return;
           }
-          if (EA_ENDPOINT) {
-            var data = new FormData();
-            data.append("email", email);
-            data.append("source", "exomudra.com early access");
-            fetch(EA_ENDPOINT, {
-              method: "POST",
-              headers: { Accept: "application/json" },
-              body: data,
-            })
-              .then(function (r) {
-                if (!r.ok) throw new Error("bad");
-                form.reset();
-                msg.style.color = "var(--accent)";
-                msg.textContent = "You're on the list. We'll be in touch.";
-              })
-              .catch(function () {
-                window.location.href =
-                  "mailto:contact@exomudra.com?subject=Early%20access&body=" +
-                  encodeURIComponent("Please add me to the early-access list: " + email);
-              });
-          } else {
-            window.location.href =
-              "mailto:contact@exomudra.com?subject=Early%20access%20list&body=" +
-              encodeURIComponent("Please add me to the Exomudra early-access list: " + email);
-            msg.style.color = "var(--text-2)";
-            msg.textContent = "Opening your email app to confirm…";
-          }
+          var data = new FormData();
+          data.append(EMAIL_FIELD, email);
+          data.append("fvv", "1");
+          data.append("pageHistory", "0");
+          // Google Forms doesn't allow reading the cross-origin response,
+          // so we post with no-cors and confirm optimistically.
+          fetch(FORM_ACTION, { method: "POST", mode: "no-cors", body: data }).catch(
+            function () {},
+          );
+          form.reset();
+          msg.style.color = "var(--accent)";
+          msg.textContent = "You're on the list. We'll be in touch.";
         });
       })();
     </script>
