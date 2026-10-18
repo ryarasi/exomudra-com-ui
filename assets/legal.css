@@ -1,0 +1,39 @@
+:root{--bg:#08080c;--bg-2:#0e0e14;--accent:#ca2e55;--accent-2:#e8607a;--text:#eaeaf0;--text-2:#8a8a9e;--text-3:#7a7a94;--border:rgba(255,255,255,.05)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:#fff}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+header{position:fixed;width:100%;top:0;z-index:100;background:rgba(8,8,12,.7);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+header nav{display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{height:48px;width:auto}
+.logo .wordmark{font-family:"League Gothic",sans-serif;font-size:2.8rem;color:#fff;letter-spacing:.05em;text-transform:uppercase}
+.back{color:var(--text-2);text-decoration:none;font-size:.875rem;font-weight:500;letter-spacing:.5px;text-transform:uppercase}
+.back:hover{color:var(--accent)}
+main{padding:120px 0 72px}
+.doc{max-width:780px;margin:0 auto;padding:0 24px}
+.doc h1{font-family:"League Gothic",sans-serif;font-weight:400;font-size:3.6rem;letter-spacing:.03em;text-transform:uppercase;line-height:1.1;margin-bottom:1rem}
+.doc h2{font-family:"League Gothic",sans-serif;font-weight:400;font-size:2rem;letter-spacing:.03em;text-transform:uppercase;margin:2.5rem 0 .75rem;color:#fff}
+.doc h3{font-size:1.05rem;margin:1.75rem 0 .5rem;color:#fff}
+.doc p,.doc li{color:#c9c9d6;font-size:1rem}
+.doc p{margin:.8rem 0}
+.doc ul,.doc ol{margin:.8rem 0 .8rem 1.4rem}
+.doc li{margin:.35rem 0}
+.doc a{color:var(--accent-2);text-underline-offset:3px}
+.doc a:hover{color:var(--accent)}
+.doc strong{color:#fff}
+.doc hr{border:0;border-top:1px solid var(--border);margin:2rem 0}
+.doc table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem;display:block;overflow-x:auto}
+.doc th,.doc td{text-align:left;padding:.55rem .75rem;border:1px solid rgba(255,255,255,.1);vertical-align:top;color:#c9c9d6}
+.doc th{background:var(--bg-2);color:#fff}
+.doc blockquote{border-left:3px solid var(--accent);padding:.2rem 1rem;margin:1rem 0;color:var(--text-2)}
+.doc code{font-family:"JetBrains Mono",monospace;font-size:.85em;background:var(--bg-2);padding:.1em .35em;border-radius:3px}
+footer{background:var(--bg);border-top:1px solid var(--border);padding:2.5rem 0 1.5rem}
+.foot-legal{display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;margin-bottom:1rem}
+.foot-legal a,.foot-bottom a{color:var(--text-2);text-decoration:none;font-size:.85rem;transition:color .25s}
+.foot-legal a:hover,.foot-bottom a:hover{color:var(--accent)}
+.foot-disclaimer{color:var(--text-3);font-size:.8rem;margin-bottom:1.25rem;max-width:760px}
+.foot-bottom{padding-top:1.25rem;border-top:1px solid var(--border)}
+.foot-bottom p{font-size:.8rem;color:var(--text-3)}
+@media(max-width:768px){.doc h1{font-size:2.8rem}.logo .wordmark{font-size:2.2rem}}

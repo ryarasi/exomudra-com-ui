@@ -1,0 +1,12 @@
+{
+  "name": "exomudra-com-ui",
+  "private": true,
+  "type": "module",
+  "description": "Static site. No build step on Cloudflare; the legal pages are generated locally with `npm run build:legal` and committed.",
+  "scripts": {
+    "build:legal": "node scripts/build-legal.mjs"
+  },
+  "devDependencies": {
+    "marked": "^15.0.0"
+  }
+}

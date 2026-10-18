@@ -51,6 +51,9 @@ Allow: /
 Allow: /llms.txt
 Allow: /favicon.ico
 Allow: /logo.png
+Allow: /terms/
+Allow: /privacy/
+Allow: /health-data/
 
 # Sitemap location
 Sitemap: https://exomudra.com/sitemap.xml

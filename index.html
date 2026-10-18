@@ -761,6 +761,27 @@
       .foot-col a:hover {
         color: var(--accent);
       }
+      .foot-legal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .foot-legal a {
+        color: var(--text-2);
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: color 0.25s;
+      }
+      .foot-legal a:hover {
+        color: var(--accent);
+      }
+      .foot-disclaimer {
+        color: var(--text-3);
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+        max-width: 760px;
+      }
       .foot-bottom {
         display: flex;
         justify-content: space-between;
@@ -1859,9 +1880,20 @@
             >
           </div>
         </div>
+        <div class="foot-legal">
+          <a href="/terms/">Terms</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/health-data/">Consumer Health Data</a>
+          <a href="mailto:contact@exomudra.com">contact@exomudra.com</a>
+        </div>
+        <p class="foot-disclaimer">
+          Exomudra is a general wellness and exercise product. It is not a
+          medical device and is not intended to diagnose, treat, cure, monitor
+          or prevent any disease or condition.
+        </p>
         <div class="foot-bottom">
           <p>
-            &copy; 2026 Exomudra Technologies Private Limited. All rights
+            &copy; Exomudra Technologies Private Limited. All rights
             reserved.
           </p>
           <p>
