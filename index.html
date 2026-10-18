@@ -1061,6 +1061,32 @@
         outline: none;
         border-color: var(--accent);
       }
+      .ea-consent {
+        flex-basis: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        text-align: left;
+        font-size: 0.85rem;
+        line-height: 1.45;
+        color: var(--text-2);
+        cursor: pointer;
+      }
+      .ea-consent input {
+        flex-shrink: 0;
+        margin-top: 3px;
+        width: 16px;
+        height: 16px;
+        accent-color: var(--accent);
+      }
+      .ea-consent a {
+        color: var(--accent-2);
+        text-decoration: underline;
+      }
+      .ea-msg a {
+        color: inherit;
+        text-decoration: underline;
+      }
       .ea-msg {
         margin-top: 1.1rem;
         font-size: 0.9rem;
@@ -1754,6 +1780,7 @@
 
     <!-- EARLY ACCESS -->
     <section class="sec sec-center" id="early-access" style="background: var(--bg-2)">
+      <span id="waitlist"></span>
       <div class="container">
         <span class="sec-label"><span>// Early Access</span></span>
         <h2>Join the waitlist.</h2>
@@ -1773,6 +1800,14 @@
             required
             aria-label="Email address"
           />
+          <label class="ea-consent">
+            <input type="checkbox" id="ea-consent" required />
+            <span
+              >Email me about Exomudra launches and early access. I can
+              unsubscribe any time. See the
+              <a href="/privacy/">Privacy Policy</a>.</span
+            >
+          </label>
           <button type="submit" class="btn btn-p"><span>Join the list</span></button>
         </form>
         <p id="ea-msg" class="ea-msg" role="status" aria-live="polite"></p>
@@ -2057,49 +2092,44 @@
       startAutoSwitch();
 
       // ══════════════════════════════════════
-      //  WAITLIST SIGNUP  →  Google Form
+      //  WAITLIST SIGNUP  →  Supabase (public.waitlist, insert-only for anon)
+      //  The anon key is public by design; row-level security allows insert only.
+      //  ?src=ces tags the source (default "site"). ?env=dev works on localhost only.
       // ══════════════════════════════════════
       (function () {
-        var FORM_ACTION =
-          "https://docs.google.com/forms/d/e/1FAIpQLSfrMfn_BRmBogzHHuKzdXG37BHl1o7wNBPm7RuO3QSMT1FTrA/formResponse";
-        var EMAIL_FIELD = "entry.466209938";
+        var CONSENT_VERSION = "1.0";
+        var PROD = {
+          url: "https://dlzufbixuxbknhgicevn.supabase.co",
+          key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRsenVmYml4dXhia25oZ2ljZXZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIyMjk5NjQsImV4cCI6MjEwNzgwNTk2NH0.NLO6ovWxVLRRKisPGE5Aqqh4dmCtXRyzZ11bJk39QD4",
+        };
+        var DEV = {
+          url: "https://flkozmvwkxxphuuyyuxl.supabase.co",
+          key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZsa296bXZ3a3h4cGh1dXl5dXhsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIzMDY3OTIsImV4cCI6MjEwNzg4Mjc5Mn0.uhqTpFv9dQeXzYJ-s9sY5fJbD42gZg0NvqKqUKSEHFQ",
+        };
+        var params = new URLSearchParams(location.search);
+        var isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+        var target = isLocal && params.get("env") === "dev" ? DEV : PROD;
+        var source = (params.get("src") || "site").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 32) || "site";
         var form = document.getElementById("ea-form");
         if (!form) return;
         var msg = document.getElementById("ea-msg");
         var input = document.getElementById("ea-email");
+        var consent = document.getElementById("ea-consent");
         var btn = form.querySelector('button[type="submit"]');
         var btnSpan = btn.querySelector("span");
         var CHECK =
           '<svg class="ea-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          if (form.dataset.done === "1") return;
-          var email = input.value.trim();
-          if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-            msg.style.color = "var(--accent-2)";
-            msg.textContent = "Please enter a valid email address.";
-            return;
-          }
-          // 1) loading state, so the visitor sees something is happening
-          btn.disabled = true;
-          input.disabled = true;
-          msg.textContent = "";
-          btnSpan.innerHTML = '<span class="ea-spinner"></span>Joining…';
-          // fire the real submission in the background
-          var data = new FormData();
-          data.append(EMAIL_FIELD, email);
-          data.append("fvv", "1");
-          data.append("pageHistory", "0");
-          // Google Forms blocks reading the cross-origin response, so we post
-          // with no-cors and confirm after a short, deliberate beat.
-          fetch(FORM_ACTION, { method: "POST", mode: "no-cors", body: data }).catch(
-            function () {},
-          );
-          // 2) confirm clearly and positively
-          setTimeout(function () {
-            form.dataset.done = "1";
-            btn.classList.add("ea-done");
-            btnSpan.innerHTML = CHECK + "Joined";
+        function fail(html) {
+          msg.style.color = "var(--accent-2)";
+          msg.innerHTML = html;
+        }
+        function done(already) {
+          form.dataset.done = "1";
+          btn.classList.add("ea-done");
+          btnSpan.innerHTML = CHECK + (already ? "Already joined" : "Joined");
+          msg.style.color = "";
+          msg.textContent = already ? "You're already on the list." : "";
+          if (!already) {
             var toast = document.getElementById("ea-toast");
             if (toast) {
               toast.classList.add("show");
@@ -2107,7 +2137,63 @@
                 toast.classList.remove("show");
               }, 4800);
             }
-          }, 1200);
+          }
+        }
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (form.dataset.done === "1") return;
+          var email = input.value.trim().toLowerCase();
+          if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || email.length > 254) {
+            fail("Please enter a valid email address.");
+            return;
+          }
+          if (!consent.checked) {
+            fail("Please tick the box to agree to be emailed.");
+            return;
+          }
+          btn.disabled = true;
+          input.disabled = true;
+          consent.disabled = true;
+          msg.textContent = "";
+          btnSpan.innerHTML = '<span class="ea-spinner"></span>Joining…';
+          function reset() {
+            btn.disabled = false;
+            input.disabled = false;
+            consent.disabled = false;
+            btnSpan.textContent = "Join the list";
+          }
+          fetch(target.url + "/rest/v1/waitlist", {
+            method: "POST",
+            headers: {
+              apikey: target.key,
+              Authorization: "Bearer " + target.key,
+              "Content-Type": "application/json",
+              Prefer: "return=minimal",
+            },
+            body: JSON.stringify({
+              email: email,
+              consent_text_version: CONSENT_VERSION,
+              source: source,
+            }),
+          })
+            .then(function (res) {
+              if (res.ok) return done(false);
+              return res.json().then(
+                function (j) {
+                  if (res.status === 409 || (j && j.code === "23505")) return done(true);
+                  throw new Error("status " + res.status);
+                },
+                function () {
+                  throw new Error("status " + res.status);
+                },
+              );
+            })
+            .catch(function () {
+              reset();
+              fail(
+                'Something went wrong. Please try again, or email <a href="mailto:contact@exomudra.com">contact@exomudra.com</a>.',
+              );
+            });
         });
       })();
     </script>
