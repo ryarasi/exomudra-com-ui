@@ -16,7 +16,7 @@
     </title>
     <meta
       name="description"
-      content="Wireless smart gloves enabling natural hand gesture interaction for healthcare rehabilitation, sign language translation, and beyond. Technology that structures around the human body."
+      content="Free Exomudra desktop app for Windows and macOS: control a live 3D hand with your webcam, practise sign language and hand exercises. Plus wireless smart gloves for natural hand gesture interaction."
     />
     <meta
       name="keywords"
@@ -38,7 +38,7 @@
     />
     <meta
       property="og:description"
-      content="Wireless smart gloves that pair any human hand gesture to digital signals. Starting with healthcare rehabilitation and sign language accessibility."
+      content="Free desktop app for Windows and macOS that turns your webcam into hand tracking, plus wireless smart gloves that pair any hand gesture to digital signals."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://exomudra.com/" />
@@ -55,7 +55,7 @@
     />
     <meta
       name="twitter:description"
-      content="Wireless smart gloves that pair any human hand gesture to digital signals. Starting with healthcare rehabilitation and sign language accessibility."
+      content="Free desktop app for Windows and macOS that turns your webcam into hand tracking, plus wireless smart gloves that pair any hand gesture to digital signals."
     />
     <meta name="twitter:image" content="https://exomudra.com/logo.png" />
 
@@ -1184,6 +1184,22 @@
         color: var(--text-3);
         font-family: "JetBrains Mono", monospace;
       }
+      .dl-copy {
+        max-width: 640px;
+        margin: 0.9rem auto 0;
+        font-size: 0.9rem;
+        color: var(--text-2);
+        line-height: 1.7;
+      }
+      .dl-warn a {
+        color: var(--accent);
+      }
+      .dl-btns .btn.is-rec {
+        box-shadow: 0 0 0 2px var(--accent);
+      }
+      .dl-note code {
+        overflow-wrap: anywhere;
+      }
       .dl-note {
         max-width: 640px;
         margin: 1.75rem auto 0;
@@ -1618,25 +1634,36 @@
         </p>
         <div class="dl-btns">
           <a
-            href="https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/osx/Exomudra.Desktop-osx-Setup-0.1.15.pkg"
+            id="dl-mac"
+            href="https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/osx/Exomudra.Desktop-osx-Setup-0.1.16.pkg"
             class="btn btn-p"
             download
             ><span>Download for macOS</span></a
           >
           <a
-            href="https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/win/Exomudra.Desktop-win-Setup-0.1.15.exe"
+            id="dl-win"
+            href="https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/win/Exomudra.Desktop-win-Setup-0.1.16.exe"
             class="btn btn-o"
             download
             ><span>Download for Windows</span></a
           >
         </div>
-        <p class="dl-meta">
-          Version 0.1.15 &middot; released 2026-10-07 &middot; macOS .pkg
-          (131&nbsp;MB) / Windows .exe (166&nbsp;MB) &middot; unsigned preview
-          build
+        <p class="dl-meta" id="dl-meta">
+          Version 0.1.16 &middot; released 2026-10-13 &middot; macOS .pkg
+          (132&nbsp;MB) / Windows .exe (166&nbsp;MB)
         </p>
-        <details class="dl-note">
-          <summary>Opening the app on first launch</summary>
+        <p class="sec-desc dl-copy">
+          Free for Windows and macOS. Try the Playground straight away, or sign
+          in with your email to use Hand Rehab, the Configurator and ASL
+          Practice.
+        </p>
+        <p class="dl-copy dl-warn">
+          The preview builds aren&apos;t code-signed yet, so your computer will
+          warn you the first time.
+          <a href="#dl-open" id="dl-open-link">How to open it</a>
+        </p>
+        <details class="dl-note" id="dl-open">
+          <summary>How to open it</summary>
           <div>
             <p>
               This preview build isn&apos;t code-signed yet, so your OS warns on
@@ -1650,7 +1677,7 @@
               double-click the&nbsp;.pkg:<br />
               <code
                 >xattr -d com.apple.quarantine
-                ~/Downloads/Exomudra.Desktop-osx-Setup-0.1.15.pkg</code
+                ~/Downloads/Exomudra.Desktop-osx-Setup-*.pkg</code
               ><br />
               Or double-click, and on the warning go to
               <em>System Settings &rarr; Privacy &amp; Security</em> &rarr;
@@ -1660,7 +1687,9 @@
             <p>
               <strong>Windows</strong> (run on a Windows PC, not via Wine on
               Mac): on the SmartScreen prompt, click <em>More info</em> &rarr;
-              <em>Run anyway</em>.
+              <em>Run anyway</em>. If you only see
+              <em>Don&apos;t run</em>, click <em>More info</em> first: the
+              <em>Run anyway</em> button appears underneath it.
             </p>
           </div>
         </details>
@@ -1933,7 +1962,7 @@
           </p>
           <p>
             Chennai, India &middot; Incubated at
-            <a href="https://itnthub.com/" target="_blank" rel="noopener"
+            <a href="https://www.itnthub.com/" target="_blank" rel="noopener"
               >iTNT Hub</a
             >
           </p>
@@ -1955,6 +1984,45 @@
       ></span>
       <span>You're on the list &mdash; we'll email you at launch.</span>
     </div>
+
+    <script>
+      // Download section: read latest.json from R2, fall back to the hard-coded links.
+      (function () {
+        var mac = document.getElementById("dl-mac"),
+          win = document.getElementById("dl-win"),
+          meta = document.getElementById("dl-meta");
+        if (!mac || !win) return;
+        var ua = navigator.userAgent || "";
+        var os = /Windows/i.test(ua) ? "win" : /Mac/i.test(ua) && !/iPhone|iPad/i.test(ua) ? "mac" : "";
+        function mb(n) { return Math.round(n / 1e6) + "\u00a0MB"; }
+        function highlight() {
+          var rec = os === "win" ? win : os === "mac" ? mac : null;
+          if (rec) rec.classList.add("is-rec");
+        }
+        highlight();
+        var link = document.getElementById("dl-open-link");
+        if (link) link.addEventListener("click", function () {
+          var d = document.getElementById("dl-open");
+          if (d) d.open = true;
+        });
+        var q = location.search.match(/[?&]latest=([^&]+)/);
+        var url = q && /^(localhost|127\.0\.0\.1)$/.test(location.hostname)
+          ? decodeURIComponent(q[1])
+          : "https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/latest.json";
+        fetch(url, { cache: "no-cache" })
+          .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+          .then(function (j) {
+            if (!j || !j.version || !j.mac || !j.win || !j.mac.url || !j.win.url) throw new Error("bad manifest");
+            mac.href = j.mac.url;
+            win.href = j.win.url;
+            if (meta) {
+              meta.textContent = "Version " + j.version + " \u00b7 released " + j.date +
+                " \u00b7 macOS .pkg (" + mb(j.mac.bytes) + ") / Windows .exe (" + mb(j.win.bytes) + ")";
+            }
+          })
+          .catch(function () { /* keep the hard-coded fallback links */ });
+      })();
+    </script>
 
     <script>
       // ══════════════════════════════════════

@@ -2,6 +2,16 @@
 
 > Exomudra Technologies is an early-stage deep tech startup based in Chennai, India, currently in the prototyping stage. We are building the next generation human machine interface through wireless smart gloves that enable natural hand gesture interaction with computers, replacing rigid controllers with intuitive and immersive experiences.
 
+## Free Desktop App
+
+Exomudra offers a free desktop app for Windows and macOS (https://exomudra.com/#download). It tracks your hand with a webcam; sign in with an email to use Hand Rehab, the Configurator and ASL Practice. It is a general wellness and exercise product, not a medical device.
+
+## Legal
+
+- Terms of Service: https://exomudra.com/terms/
+- Privacy Policy: https://exomudra.com/privacy/
+- Consumer Health Data Notice: https://exomudra.com/health-data/
+
 ## Company Overview
 
 Exomudra Technologies Private Limited is a deep tech startup founded to revolutionize human-machine interaction. The company is incubated at iTNT Hub and focuses on developing advanced motion capture technology through smart gloves.
