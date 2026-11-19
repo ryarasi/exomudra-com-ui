@@ -16,13 +16,15 @@
 .dl-msg.err{color:var(--accent-2)}
 .dl-result{margin-top:1.5rem;padding:1.25rem;background:#16161f;border:1px solid var(--border)}
 .dl-result h2{margin-top:0}
-.dl-links{display:flex;flex-direction:column;gap:12px}
+.dl-links{display:flex;flex-direction:column;gap:14px}
+.dl-row{display:flex;flex-direction:column;gap:6px;min-width:0}
 .dl-links .btn-dl{align-self:stretch;text-align:center}
+.dl-copy{align-self:flex-start;background:none;border:0;padding:4px 0;font:inherit;font-size:.85rem;color:var(--accent-2);text-decoration:underline;cursor:pointer}
 .dl-links .btn-dl.is-first{box-shadow:0 0 0 2px var(--accent)}
 .dl-links .btn-dl.alt{background:transparent;border:1px solid var(--accent)}
 .dl-meta{font-size:.85rem;color:var(--text-2);margin:.7rem 0 0}
 .dl-notice{margin-top:2.5rem}
 .dl-warn{color:#fff}
 .dl-next{margin-top:1.2rem}
-@media(min-width:640px){.dl-links{flex-direction:row}.dl-links .btn-dl{flex:1}}
+@media(min-width:640px){.dl-links{flex-direction:row}.dl-row{flex:1}}
 .doc a.btn-dl,.doc a.btn-dl:hover{color:#fff;text-decoration:none}

@@ -52,11 +52,34 @@
       "error-callback": function () { token = ""; },
     });
   }
-  var tries = 0;
-  var timer = setInterval(function () {
-    mountWidget();
-    if (widgetId !== null || ++tries > 100) clearInterval(timer);
-  }, 100);
+  window.exoTurnstileReady = mountWidget;
+  if (window.turnstile) mountWidget();
+
+  function copyLink(url, button) {
+    function ok() {
+      button.textContent = "Copied";
+      setTimeout(function () { button.textContent = "Copy link"; }, 2000);
+    }
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = url;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      var done = false;
+      try { done = document.execCommand("copy"); } catch (e) { done = false; }
+      document.body.removeChild(ta);
+      if (done) ok();
+      else window.prompt("Copy this link", url);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(ok, fallback);
+    } else {
+      fallback();
+    }
+  }
 
   function showLinks(links, emailStatus) {
     var rows = [
@@ -69,6 +92,8 @@
     rows.forEach(function (r, i) {
       var item = links[r.key];
       if (!item || !item.url) return;
+      var row = document.createElement("div");
+      row.className = "dl-row";
       var a = document.createElement("a");
       a.href = item.url;
       a.className = "btn-dl" + (i === 0 && os ? " is-first" : "") + (i === 1 ? " alt" : "");
@@ -76,7 +101,14 @@
       var s = document.createElement("span");
       s.textContent = r.label;
       a.appendChild(s);
-      linksEl.appendChild(a);
+      var cp = document.createElement("button");
+      cp.type = "button";
+      cp.className = "dl-copy";
+      cp.textContent = "Copy link";
+      cp.addEventListener("click", function () { copyLink(item.url, cp); });
+      row.appendChild(a);
+      row.appendChild(cp);
+      linksEl.appendChild(row);
       if (item.bytes) sizes.push((r.key === "mac" ? "macOS " : "Windows ") + r.ext + " " + mb(item.bytes));
     });
     var meta = [];
@@ -84,7 +116,7 @@
     if (sizes.length) meta.push(sizes.join(" / "));
     metaEl.textContent = meta.join(" · ");
     if (emailStatus === "sent") noteEl.textContent = "We've emailed the link too.";
-    else if (emailStatus === "queued") noteEl.textContent = "Your email is in the queue and will arrive within a day.";
+    else if (emailStatus === "queued") noteEl.textContent = "Our email is busy today, so it may take a few days. Use the link above now, or copy it to send to yourself.";
     else noteEl.textContent = "";
     result.hidden = false;
   }
@@ -115,10 +147,6 @@
       say("Please enter a valid email address.", true);
       return;
     }
-    if (!token) {
-      say("Please wait for the check below to finish, then try again.", true);
-      return;
-    }
     btn.disabled = true;
     input.disabled = true;
     optin.disabled = true;
@@ -129,7 +157,7 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: email,
-        turnstileToken: token,
+        turnstileToken: token || "",
         marketingOptIn: optin.checked,
         consentTextVersion: "download-1.0",
         source: source,
