@@ -1,6 +1,7 @@
 (function () {
-  // Cloudflare's always-pass test key. Replace with the production site key once D2 creates the widget.
-  var TURNSTILE_SITE_KEY = "1x00000000000000000000AA";
+  // Widget "Exomudra Download" (exomudra.com, www). Localhost uses Cloudflare's always-pass test key,
+  // which matches the test secret on the dev project.
+  var TURNSTILE_SITE_KEY = location.hostname === "localhost" ? "1x00000000000000000000AA" : "0x4AAAAAAGIwRxrDa489I3pE";
   var PROD_REF = "dlzufbixuxbknhgicevn";
   var DEV_REF = "flkozmvwkxxphuuyyuxl";
   var R2 = "https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable";
