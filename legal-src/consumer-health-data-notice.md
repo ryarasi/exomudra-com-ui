@@ -1,6 +1,6 @@
 # Consumer Health Data Notice
 
-**Version 1.0 · Effective 18 October 2026**
+**Version 1.1 · Effective 1 December 2026**
 
 This notice is for residents of Washington State (My Health My Data Act), Nevada (SB 370), Connecticut and other US states with consumer health data laws. It applies alongside our [Privacy Policy](https://exomudra.com/privacy), and in a conflict this notice wins for consumer health data.
 
@@ -27,6 +27,7 @@ We do not collect camera video. Hand tracking runs on your computer and camera i
 - To set the difficulty of your exercises and games.
 - To lower difficulty and show a stop message when you report pain.
 - To recognise the gestures you trained (gesture samples).
+- Only if you choose "Contribute your signs" in ASL Practice: to train our sign recogniser for everyone (the gesture samples you contribute).
 - To understand where people struggle in the app and improve it (usage events and recordings, only if you opt in).
 
 We don't use consumer health data for advertising, and we don't sell it.
@@ -56,6 +57,7 @@ We collect consumer health data only after you agree, through separate choices i
 - **"Share usage data"** together with "Store my exercise results": both are needed before any Rehab performance or pain event is sent to our analytics provider.
 - **"Include Rehab screens in usage recordings"** (the same choice covers ASL Practice screens; it appears in Settings → Privacy as "Rehab and ASL recordings").
 - **"Back up my gesture recordings to my account"**, which also serves as your written release for biometric data.
+- **"Contribute your signs"** (ASL Practice, adults only, not offered to people who tell us they live in Illinois or Texas), a separate choice on top of the backup one. Withdrawing it deletes the samples you contributed and leaves them out of future training.
 
 Each consent is separate, optional for using the app, and can be withdrawn at any time in Settings → Privacy. Withdrawing stops collection immediately. If you withdraw "Store my exercise results", we offer you an export first, then delete the exercise data in your account after you confirm.
 

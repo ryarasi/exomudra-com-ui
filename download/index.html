@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get Exomudra on your computer | Exomudra</title>
+    <meta name="description" content="Download the free Exomudra desktop app for Mac (M1 or later) and Windows. Enter your email and we will send the link." />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="https://exomudra.com/download/" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/legal.css" />
+    <link rel="stylesheet" href="/download/download.css" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="/" class="logo"><img src="/logo.png" alt="Exomudra Logo" /><span class="wordmark">EXOMUDRA</span></a>
+        <a href="/" class="back">&larr; Back to exomudra.com</a>
+      </nav>
+    </header>
+    <main>
+      <article class="doc">
+        <h1>Get Exomudra on your computer</h1>
+        <p class="lead">Scanned this on your phone? Enter your email and we'll send the download link to open on your laptop.</p>
+
+        <form id="dl-form" class="dl-form" novalidate>
+          <label class="dl-label" for="dl-email">Email address</label>
+          <input type="email" id="dl-email" class="dl-input" placeholder="you@email.com" autocomplete="email" required />
+          <label class="dl-consent">
+            <input type="checkbox" id="dl-optin" />
+            <span>I'm 18 or over. Also send me Exomudra product updates. I can unsubscribe any time. See the <a href="/privacy/">Privacy Policy</a>.</span>
+          </label>
+          <div id="dl-turnstile" class="dl-turnstile"></div>
+          <button type="submit" id="dl-submit" class="btn-dl"><span>Send me the link</span></button>
+        </form>
+        <p id="dl-msg" class="dl-msg" role="status" aria-live="polite"></p>
+
+        <section id="dl-result" class="dl-result" hidden>
+          <h2>Your download</h2>
+          <div id="dl-links" class="dl-links"></div>
+          <p id="dl-meta" class="dl-meta"></p>
+          <p id="dl-email-note" class="dl-meta"></p>
+        </section>
+
+        <section class="dl-notice" id="dl-open">
+          <h2>Opening it the first time</h2>
+          <p class="dl-warn">This preview build isn't signed yet, so your computer will warn you the first time. That's expected.</p>
+          <h3>macOS (Apple silicon, M1 or later)</h3>
+          <ol>
+            <li>Open the downloaded installer. macOS blocks it.</li>
+            <li>Open System Settings &rarr; Privacy &amp; Security.</li>
+            <li>Scroll down to Security and click <strong>Open Anyway</strong> within an hour of the block.</li>
+            <li>Enter your password.</li>
+          </ol>
+          <h3>Windows</h3>
+          <ol>
+            <li>If your browser says the file "isn't commonly downloaded", choose <strong>Keep</strong>, then <strong>Keep anyway</strong>.</li>
+            <li>On "Windows protected your PC", click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+          </ol>
+          <p><strong>Windows 11 with Smart App Control on:</strong> it blocks unsigned apps with no override. Turn it off in Windows Security &rarr; App &amp; browser control &rarr; Smart App Control, or wait for the signed release.</p>
+          <p class="dl-next">In the app: try the Playground free for 10 minutes, then sign in with your email (no password) to keep going.</p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="foot-legal">
+          <a href="/terms/">Terms</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/health-data/">Consumer Health Data</a>
+          <a href="mailto:contact@exomudra.com">contact@exomudra.com</a>
+        </div>
+        <div class="foot-bottom"><p>&copy; Exomudra Technologies Private Limited</p></div>
+      </div>
+    </footer>
+    <script src="/download/download.js"></script>
+  </body>
+</html>

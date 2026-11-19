@@ -1,6 +1,6 @@
 # Exomudra Privacy Policy
 
-**Version 1.0 · Effective 18 October 2026**
+**Version 1.1 · Effective 1 December 2026**
 
 This policy explains what personal data Exomudra collects through the Exomudra desktop app, your Exomudra account and exomudra.com, why, where it is kept, and the choices and rights you have.
 
@@ -18,8 +18,8 @@ We decide how and why your data is used. That makes us the "Data Fiduciary" unde
 ## 2. The short version
 
 - **Your camera stays on your computer.** Hand tracking runs locally. Camera video is never uploaded, stored or recorded by us, and the camera and 3D views are never included in screen recordings.
-- **You can use the app without an account.** Guests give us no name or email.
-- **Analytics and screen recordings are off until you turn them on**, and you can turn them off at any time.
+- **You can try the Playground without an account, free for 10 minutes on a computer.** After that, signing in with your email keeps it going and opens every app. Guests give the app no name or email.
+- **In the app, analytics and screen recordings are off until you turn them on**, and you can turn them off at any time. The website is different: it uses Microsoft Clarity (section 3.9).
 - **Exercise results are only stored in your account if you say yes**, separately from everything else.
 - **Recorded gesture samples are only uploaded if you say yes.** Otherwise they stay on your computer.
 - **We don't sell your data**, and we don't use it for advertising.
@@ -64,7 +64,7 @@ Some laws, including the Illinois Biometric Information Privacy Act and the Texa
 
 Legal basis: explicit consent.
 
-**Contributing your signs (optional, separate).** ASL Practice may later offer "Contribute your signs", which uses your recordings to train our sign recogniser for everyone. That is a separate choice with its own consent screen, for adults only. It isn't offered to people who tell us they live in Illinois or Texas. You can withdraw at any time: we then delete your recordings and leave them out of future training. Without that choice, your samples are used only for your own gestures.
+**Contributing your signs (optional, separate).** ASL Practice offers "Contribute your signs", which uses your recordings to train our sign recogniser for everyone. That is a separate choice with its own consent screen, for adults only. It isn't offered to people who tell us they live in Illinois or Texas. You can withdraw at any time in Settings → Privacy: we then delete your recordings and leave them out of future training. A recogniser already trained on them can't un-learn them, but it is retrained without them at its next release. Without that choice, your samples are used only for your own gestures.
 
 ### 3.5 Exercise data (Hand Rehab, optional)
 
@@ -100,7 +100,17 @@ When you sign in, download the app or check for updates, our providers receive y
 
 ### 3.9 Website (exomudra.com)
 
-The website doesn't use analytics or advertising cookies. If you join the waitlist, we collect your email to tell you about launches (consent). The waitlist form is currently hosted on Google Forms, so Google processes that email for us.
+**Analytics.** The website loads Microsoft Clarity, a web analytics tool that records how visitors use our pages (for example clicks, scrolling and pages viewed) so we can improve them. It sets its own identifiers in your browser. Legal basis: legitimate interest. The website does not use advertising cookies.
+
+**Waitlist.** If you join the waitlist, we collect your email to tell you about launches (consent). It is stored in our Supabase database.
+
+**Download requests.** If you ask for the download link on exomudra.com, we collect your email address, the time of the request and the network address (IP) it came from, and we store them in Supabase. We show you the link at once and Resend emails it to you. The form uses Cloudflare Turnstile, which checks that you are a person and not a bot; Cloudflare processes your IP address and browser details for that check. We limit how many requests one email or one network address can make, to stop abuse.
+
+**Product updates (optional).** The form has a separate box, unticked by default: "I'm 18 or over. Also send me Exomudra product updates. I can unsubscribe any time." We send product updates only to people who tick it and so confirm they are 18 or over. Legal basis: consent. You can unsubscribe at any time with the link in every updates email, or by emailing contact@exomudra.com. The download email itself is sent because you asked for it.
+
+### 3.10 Guest time on your computer
+
+The app keeps a small file on your computer with how many minutes you have used the Playground as a guest, so the 10 free minutes are counted across restarts. It is not sent to us. Deleting the file or reinstalling the app can reset it. Signing in removes the limit.
 
 ## 4. Who we share it with
 
@@ -110,9 +120,9 @@ We don't sell personal data, and we don't share it for targeted advertising. We 
 |---|---|---|
 | Supabase | Accounts, sign-in, database, file storage | Frankfurt, Germany (EU) |
 | PostHog | Usage analytics and screen recordings (only if you opt in) | EU Cloud, Frankfurt, Germany |
-| Resend | Sending sign-in code emails | Ireland (EU) |
-| Cloudflare | Hosting app downloads and updates, and our website | Global network |
-| Google (Forms) | Website waitlist | Global |
+| Resend | Sending sign-in code emails, download-link emails and, if you opted in, product updates | Ireland (EU) |
+| Cloudflare | Hosting app downloads and updates, and our website; Turnstile on the download form | Global network |
+| Microsoft (Clarity) | Website analytics (exomudra.com only) | Global |
 
 Some providers are US companies whose staff may access data for support or security from outside the EU. Where that happens they rely on the EU Standard Contractual Clauses or an equivalent safeguard.
 
@@ -135,6 +145,7 @@ Our main data stores are in the European Union (Frankfurt, Germany), for all use
 | Screen recordings | 30 days |
 | Analytics events | kept only as long as needed to improve the app, or until you use "Delete my analytics data" (no fixed automatic period is stated yet; see section 3.6) |
 | Consent records | Life of the account. When you delete your account, we keep a pseudonymised log (a one-way hash of your account ID, the consent type, version and time, nothing else) for 3 years to prove what was agreed |
+| Download requests (email, time, network address) | Deleted after 90 days if you did not tick the product-updates box. If you did, kept until you unsubscribe |
 | Sign-in and security logs | As kept by our providers, typically up to 90 days |
 | Data on your computer | Until you delete it or uninstall the app (some settings stay in your user folder; Settings has "Clear local data") |
 
@@ -165,13 +176,13 @@ In the past 12 months we collected these categories of personal information: ide
 - We **do not sell or share** personal information, as the CCPA defines those terms, and haven't in the past 12 months.
 - We use **sensitive personal information** only to provide the features you asked for. You can still ask us to limit its use: email contact@exomudra.com with "Limit the use of my sensitive personal information", or turn off exercise-data saving and gesture backups in the app.
 - You can access, correct and delete your data, and we won't treat you differently for using your rights. An authorised agent can make a request for you with your signed permission.
-- Our website honours Global Privacy Control signals, although it has no tracking to switch off.
+- Our website's analytics (Microsoft Clarity) is described in section 3.9.
 
 Residents of other US states with similar laws (for example Colorado, Connecticut, Virginia, Texas and Oregon) have similar rights, and can exercise them in the same way. If we refuse a request, you can appeal by replying to our refusal email, and we'll respond within 60 days.
 
 ## 8. Children
 
-Accounts are only for people 18 and over. We ask for your birth year and month at sign-up and don't create accounts for anyone younger. Guests of any age can use the free features without giving us personal data, but guests never get screen recordings, and we don't knowingly collect personal data from children. If you believe someone under 18 has an account, email contact@exomudra.com and we'll delete it.
+Accounts are only for people 18 and over. We ask for your birth year and month at sign-up and don't create accounts for anyone younger. Guests of any age can try the Playground for 10 minutes without giving the app personal data, but guests never get screen recordings, we send product updates only to people who confirm they are 18 or over, and we don't knowingly collect personal data from children. If you believe someone under 18 has an account, email contact@exomudra.com and we'll delete it.
 
 ## 9. Security
 

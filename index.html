@@ -1633,66 +1633,18 @@
           preview build.
         </p>
         <div class="dl-btns">
-          <a
-            id="dl-mac"
-            href="https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/osx/Exomudra.Desktop-osx-Setup-0.1.16.pkg"
-            class="btn btn-p"
-            download
+          <a id="dl-mac" href="/download/?src=site" class="btn btn-p"
             ><span>Download for macOS</span></a
           >
-          <a
-            id="dl-win"
-            href="https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/win/Exomudra.Desktop-win-Setup-0.1.16.exe"
-            class="btn btn-o"
-            download
+          <a id="dl-win" href="/download/?src=site" class="btn btn-o"
             ><span>Download for Windows</span></a
           >
         </div>
-        <p class="dl-meta" id="dl-meta">
-          Version 0.1.16 &middot; released 2026-10-13 &middot; macOS .pkg
-          (132&nbsp;MB) / Windows .exe (166&nbsp;MB)
-        </p>
         <p class="sec-desc dl-copy">
-          Free for Windows and macOS. Try the Playground straight away, or sign
-          in with your email to use Hand Rehab, the Configurator and ASL
-          Practice.
+          Free for Windows and macOS (Macs with M1 or later). Enter your email
+          to get the link, then try the Playground straight away, or sign in
+          with your email to use Hand Rehab, the Configurator and ASL Practice.
         </p>
-        <p class="dl-copy dl-warn">
-          The preview builds aren&apos;t code-signed yet, so your computer will
-          warn you the first time.
-          <a href="#dl-open" id="dl-open-link">How to open it</a>
-        </p>
-        <details class="dl-note" id="dl-open">
-          <summary>How to open it</summary>
-          <div>
-            <p>
-              This preview build isn&apos;t code-signed yet, so your OS warns on
-              first launch. One-time steps:
-            </p>
-            <p>
-              <strong>macOS:</strong> Gatekeeper blocks the unsigned installer
-              (on macOS&nbsp;15 there&apos;s no
-              right-click&nbsp;&rarr;&nbsp;Open). Easiest
-              fix&nbsp;&mdash;&nbsp;in Terminal, clear the download flag, then
-              double-click the&nbsp;.pkg:<br />
-              <code
-                >xattr -d com.apple.quarantine
-                ~/Downloads/Exomudra.Desktop-osx-Setup-*.pkg</code
-              ><br />
-              Or double-click, and on the warning go to
-              <em>System Settings &rarr; Privacy &amp; Security</em> &rarr;
-              scroll down &rarr; <em>Open Anyway</em>. If the installed app
-              won&apos;t launch, use <em>Open Anyway</em> for it once too.
-            </p>
-            <p>
-              <strong>Windows</strong> (run on a Windows PC, not via Wine on
-              Mac): on the SmartScreen prompt, click <em>More info</em> &rarr;
-              <em>Run anyway</em>. If you only see
-              <em>Don&apos;t run</em>, click <em>More info</em> first: the
-              <em>Run anyway</em> button appears underneath it.
-            </p>
-          </div>
-        </details>
       </div>
     </section>
 
@@ -1832,8 +1784,8 @@
           <label class="ea-consent">
             <input type="checkbox" id="ea-consent" required />
             <span
-              >Email me about Exomudra launches and early access. I can
-              unsubscribe any time. See the
+              >I'm 18 or over. Email me about Exomudra launches, early access
+              and product updates. I can unsubscribe any time. See the
               <a href="/privacy/">Privacy Policy</a>.</span
             >
           </label>
@@ -1985,44 +1937,6 @@
       <span>You're on the list &mdash; we'll email you at launch.</span>
     </div>
 
-    <script>
-      // Download section: read latest.json from R2, fall back to the hard-coded links.
-      (function () {
-        var mac = document.getElementById("dl-mac"),
-          win = document.getElementById("dl-win"),
-          meta = document.getElementById("dl-meta");
-        if (!mac || !win) return;
-        var ua = navigator.userAgent || "";
-        var os = /Windows/i.test(ua) ? "win" : /Mac/i.test(ua) && !/iPhone|iPad/i.test(ua) ? "mac" : "";
-        function mb(n) { return Math.round(n / 1e6) + "\u00a0MB"; }
-        function highlight() {
-          var rec = os === "win" ? win : os === "mac" ? mac : null;
-          if (rec) rec.classList.add("is-rec");
-        }
-        highlight();
-        var link = document.getElementById("dl-open-link");
-        if (link) link.addEventListener("click", function () {
-          var d = document.getElementById("dl-open");
-          if (d) d.open = true;
-        });
-        var q = location.search.match(/[?&]latest=([^&]+)/);
-        var url = q && /^(localhost|127\.0\.0\.1)$/.test(location.hostname)
-          ? decodeURIComponent(q[1])
-          : "https://pub-e43b58b2016b405091092e415cbbb889.r2.dev/releases/stable/latest.json";
-        fetch(url, { cache: "no-cache" })
-          .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-          .then(function (j) {
-            if (!j || !j.version || !j.mac || !j.win || !j.mac.url || !j.win.url) throw new Error("bad manifest");
-            mac.href = j.mac.url;
-            win.href = j.win.url;
-            if (meta) {
-              meta.textContent = "Version " + j.version + " \u00b7 released " + j.date +
-                " \u00b7 macOS .pkg (" + mb(j.mac.bytes) + ") / Windows .exe (" + mb(j.win.bytes) + ")";
-            }
-          })
-          .catch(function () { /* keep the hard-coded fallback links */ });
-      })();
-    </script>
 
     <script>
       // ══════════════════════════════════════

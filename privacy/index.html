@@ -23,7 +23,7 @@
     <main>
       <article class="doc">
         <h1>Privacy Policy</h1>
-<p><strong>Version 1.0 · Effective 18 October 2026</strong></p>
+<p><strong>Version 1.1 · Effective 1 December 2026</strong></p>
 <p>This policy explains what personal data Exomudra collects through the Exomudra desktop app, your Exomudra account and exomudra.com, why, where it is kept, and the choices and rights you have.</p>
 <p>If you live in Washington, Nevada or another US state with a consumer health data law, also read our <a href="https://exomudra.com/health-data">Consumer Health Data Notice</a>.</p>
 <h2>1. Who we are</h2>
@@ -34,8 +34,8 @@ Flat 4, East Square Apartment, 18/30 V.O.C Nagar Main Road, Anna Nagar East, Per
 <h2>2. The short version</h2>
 <ul>
 <li><strong>Your camera stays on your computer.</strong> Hand tracking runs locally. Camera video is never uploaded, stored or recorded by us, and the camera and 3D views are never included in screen recordings.</li>
-<li><strong>You can use the app without an account.</strong> Guests give us no name or email.</li>
-<li><strong>Analytics and screen recordings are off until you turn them on</strong>, and you can turn them off at any time.</li>
+<li><strong>You can try the Playground without an account, free for 10 minutes on a computer.</strong> After that, signing in with your email keeps it going and opens every app. Guests give the app no name or email.</li>
+<li><strong>In the app, analytics and screen recordings are off until you turn them on</strong>, and you can turn them off at any time. The website is different: it uses Microsoft Clarity (section 3.9).</li>
 <li><strong>Exercise results are only stored in your account if you say yes</strong>, separately from everything else.</li>
 <li><strong>Recorded gesture samples are only uploaded if you say yes.</strong> Otherwise they stay on your computer.</li>
 <li><strong>We don&#39;t sell your data</strong>, and we don&#39;t use it for advertising.</li>
@@ -105,7 +105,7 @@ Flat 4, East Square Apartment, 18/30 V.O.C Nagar Main Road, Anna Nagar East, Per
 <li>we never sell, lease, trade or otherwise profit from them, and never disclose them except to our storage provider (Supabase) to provide the service, or where the law requires. The one exception is &quot;Contributing your signs&quot; below, which is a separate choice you&#39;d have to make, and which we don&#39;t offer to residents of Illinois or Texas.</li>
 </ul>
 <p>Legal basis: explicit consent.</p>
-<p><strong>Contributing your signs (optional, separate).</strong> ASL Practice may later offer &quot;Contribute your signs&quot;, which uses your recordings to train our sign recogniser for everyone. That is a separate choice with its own consent screen, for adults only. It isn&#39;t offered to people who tell us they live in Illinois or Texas. You can withdraw at any time: we then delete your recordings and leave them out of future training. Without that choice, your samples are used only for your own gestures.</p>
+<p><strong>Contributing your signs (optional, separate).</strong> ASL Practice offers &quot;Contribute your signs&quot;, which uses your recordings to train our sign recogniser for everyone. That is a separate choice with its own consent screen, for adults only. It isn&#39;t offered to people who tell us they live in Illinois or Texas. You can withdraw at any time in Settings → Privacy: we then delete your recordings and leave them out of future training. A recogniser already trained on them can&#39;t un-learn them, but it is retrained without them at its next release. Without that choice, your samples are used only for your own gestures.</p>
 <h3>3.5 Exercise data (Hand Rehab, optional)</h3>
 <p>If you choose <strong>&quot;Store my exercise results in my Exomudra account&quot;</strong>, we store your exercise results: ranges of movement you reach, levels, session length, repetitions, success rates, and the comfort, pain and fatigue check-ins you answer, plus your goals in your own words.</p>
 <p>This can be health-related data. We collect it only with your separate, explicit consent (GDPR Article 9(2)(a)), and use it only to show you your progress and set your exercise difficulty. If you don&#39;t consent, Hand Rehab still works and keeps results only on your computer. Exomudra is a wellness product, not a medical device, and these results are not medical measurements.</p>
@@ -127,7 +127,12 @@ Flat 4, East Square Apartment, 18/30 V.O.C Nagar Main Road, Anna Nagar East, Per
 <h3>3.8 Technical and security data</h3>
 <p>When you sign in, download the app or check for updates, our providers receive your IP address and basic device information. We use this to deliver codes and downloads, prevent abuse (for example, rate-limiting sign-in codes) and keep the service secure. Our analytics project has IP address capture turned off. Legal basis: legitimate interest and contract.</p>
 <h3>3.9 Website (exomudra.com)</h3>
-<p>The website doesn&#39;t use analytics or advertising cookies. If you join the waitlist, we collect your email to tell you about launches (consent). The waitlist form is currently hosted on Google Forms, so Google processes that email for us.</p>
+<p><strong>Analytics.</strong> The website loads Microsoft Clarity, a web analytics tool that records how visitors use our pages (for example clicks, scrolling and pages viewed) so we can improve them. It sets its own identifiers in your browser. Legal basis: legitimate interest. The website does not use advertising cookies.</p>
+<p><strong>Waitlist.</strong> If you join the waitlist, we collect your email to tell you about launches (consent). It is stored in our Supabase database.</p>
+<p><strong>Download requests.</strong> If you ask for the download link on exomudra.com, we collect your email address, the time of the request and the network address (IP) it came from, and we store them in Supabase. We show you the link at once and Resend emails it to you. The form uses Cloudflare Turnstile, which checks that you are a person and not a bot; Cloudflare processes your IP address and browser details for that check. We limit how many requests one email or one network address can make, to stop abuse.</p>
+<p><strong>Product updates (optional).</strong> The form has a separate box, unticked by default: &quot;I&#39;m 18 or over. Also send me Exomudra product updates. I can unsubscribe any time.&quot; We send product updates only to people who tick it and so confirm they are 18 or over. Legal basis: consent. You can unsubscribe at any time with the link in every updates email, or by emailing <a href="mailto:contact@exomudra.com">contact@exomudra.com</a>. The download email itself is sent because you asked for it.</p>
+<h3>3.10 Guest time on your computer</h3>
+<p>The app keeps a small file on your computer with how many minutes you have used the Playground as a guest, so the 10 free minutes are counted across restarts. It is not sent to us. Deleting the file or reinstalling the app can reset it. Signing in removes the limit.</p>
 <h2>4. Who we share it with</h2>
 <p>We don&#39;t sell personal data, and we don&#39;t share it for targeted advertising. We share it only with these service providers, who process it for us under contracts (data processing agreements):</p>
 <table>
@@ -150,17 +155,17 @@ Flat 4, East Square Apartment, 18/30 V.O.C Nagar Main Road, Anna Nagar East, Per
 </tr>
 <tr>
 <td>Resend</td>
-<td>Sending sign-in code emails</td>
+<td>Sending sign-in code emails, download-link emails and, if you opted in, product updates</td>
 <td>Ireland (EU)</td>
 </tr>
 <tr>
 <td>Cloudflare</td>
-<td>Hosting app downloads and updates, and our website</td>
+<td>Hosting app downloads and updates, and our website; Turnstile on the download form</td>
 <td>Global network</td>
 </tr>
 <tr>
-<td>Google (Forms)</td>
-<td>Website waitlist</td>
+<td>Microsoft (Clarity)</td>
+<td>Website analytics (exomudra.com only)</td>
 <td>Global</td>
 </tr>
 </tbody></table>
@@ -199,6 +204,10 @@ Flat 4, East Square Apartment, 18/30 V.O.C Nagar Main Road, Anna Nagar East, Per
 <td>Life of the account. When you delete your account, we keep a pseudonymised log (a one-way hash of your account ID, the consent type, version and time, nothing else) for 3 years to prove what was agreed</td>
 </tr>
 <tr>
+<td>Download requests (email, time, network address)</td>
+<td>Deleted after 90 days if you did not tick the product-updates box. If you did, kept until you unsubscribe</td>
+</tr>
+<tr>
 <td>Sign-in and security logs</td>
 <td>As kept by our providers, typically up to 90 days</td>
 </tr>
@@ -231,11 +240,11 @@ Flat 4, East Square Apartment, 18/30 V.O.C Nagar Main Road, Anna Nagar East, Per
 <li>We <strong>do not sell or share</strong> personal information, as the CCPA defines those terms, and haven&#39;t in the past 12 months.</li>
 <li>We use <strong>sensitive personal information</strong> only to provide the features you asked for. You can still ask us to limit its use: email <a href="mailto:contact@exomudra.com">contact@exomudra.com</a> with &quot;Limit the use of my sensitive personal information&quot;, or turn off exercise-data saving and gesture backups in the app.</li>
 <li>You can access, correct and delete your data, and we won&#39;t treat you differently for using your rights. An authorised agent can make a request for you with your signed permission.</li>
-<li>Our website honours Global Privacy Control signals, although it has no tracking to switch off.</li>
+<li>Our website&#39;s analytics (Microsoft Clarity) is described in section 3.9.</li>
 </ul>
 <p>Residents of other US states with similar laws (for example Colorado, Connecticut, Virginia, Texas and Oregon) have similar rights, and can exercise them in the same way. If we refuse a request, you can appeal by replying to our refusal email, and we&#39;ll respond within 60 days.</p>
 <h2>8. Children</h2>
-<p>Accounts are only for people 18 and over. We ask for your birth year and month at sign-up and don&#39;t create accounts for anyone younger. Guests of any age can use the free features without giving us personal data, but guests never get screen recordings, and we don&#39;t knowingly collect personal data from children. If you believe someone under 18 has an account, email <a href="mailto:contact@exomudra.com">contact@exomudra.com</a> and we&#39;ll delete it.</p>
+<p>Accounts are only for people 18 and over. We ask for your birth year and month at sign-up and don&#39;t create accounts for anyone younger. Guests of any age can try the Playground for 10 minutes without giving the app personal data, but guests never get screen recordings, we send product updates only to people who confirm they are 18 or over, and we don&#39;t knowingly collect personal data from children. If you believe someone under 18 has an account, email <a href="mailto:contact@exomudra.com">contact@exomudra.com</a> and we&#39;ll delete it.</p>
 <h2>9. Security</h2>
 <p>We encrypt data in transit and at rest with our providers. Your sign-in session is stored encrypted on your computer using your operating system&#39;s keychain. Database access is restricted so each user can only reach their own private data. Each mini-app is isolated and only gets the data its permissions allow. No system is perfectly secure. If a personal data breach happens, we&#39;ll notify affected users and the authorities as the law requires (in India, the Data Protection Board within 72 hours of becoming aware; in the EU, the relevant authority within 72 hours where required).</p>
 <h2>10. Changes</h2>

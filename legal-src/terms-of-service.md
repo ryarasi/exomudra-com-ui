@@ -1,6 +1,6 @@
 # Exomudra Terms of Service
 
-**Version 1.0 · Effective 18 October 2026**
+**Version 1.1 · Effective 1 December 2026**
 
 These terms are an agreement between you and **Exomudra Technologies Private Limited** (CIN U26109TN2024PTC175805), registered office Flat 4, East Square Apartment, 18/30 V.O.C Nagar Main Road, Anna Nagar East, Perambur Purasawalkam, Chennai 600102, Tamil Nadu, India ("Exomudra", "we", "us").
 
@@ -9,7 +9,7 @@ They cover the Exomudra desktop app, its built-in mini-apps (Playground, Hand Re
 ## 1. Who can use Exomudra
 
 - **Accounts are for adults.** You must be 18 or older to create an account. When you sign up we ask for your birth year and month. If you are under 18, we won't create an account.
-- **Guests of any age.** Anyone can use the app without an account (Playground and other free features). If you are under 18, use it with a parent or guardian's permission and supervision.
+- **Guests of any age.** Anyone can try the Playground free for 10 minutes without an account. Sign in with your email to keep going and to use every app. If you are under 18, use it with a parent or guardian's permission and supervision.
 - You must give us a real email address that you control, and keep your account to yourself. You are responsible for what happens under your account.
 
 ## 2. The software
